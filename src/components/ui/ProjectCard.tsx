@@ -18,9 +18,9 @@ const CATEGORY_COLORS: Record<string, string> = {
 const PLACEHOLDER_IMAGES = [
   "/project/1502pro.png",
   "/project/craf.png",
-  "/project/axi.png",
-  "project/group.png",
-  "/project/grou.png",
+  "/project/axign.png",
+  "project/atlas.png",
+  "/project/portal.png",
 ];
 
 function getProjectImage(project: Project, index = 0) {

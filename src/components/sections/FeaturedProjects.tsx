@@ -8,11 +8,23 @@ export function FeaturedProjects() {
     <section className="py-section max-w-7xl mx-auto px-6">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-        <div className="space-y-4 max-w-xl">
+        {/* <div className="space-y-4 max-w-xl">
           <SectionLabel>Selected Work</SectionLabel>
           <h2 className="font-display text-display-lg text-white font-bold leading-tight">
             Products we&apos;ve <span className="text-gradient">shipped</span>
           </h2>
+        </div> */}
+        <div className="space-y-4 max-w-xl">
+          <SectionLabel>Selected Work</SectionLabel>
+
+          <h2 className="font-display text-display-lg text-white font-bold leading-tight">
+            Products we&apos;ve <span className="text-gradient">shipped</span>
+          </h2>
+
+          <p className="text-slate leading-relaxed">
+            Portfolio excludes products covered by non-disclosure agreements
+            (NDAs).
+          </p>
         </div>
         <Button href="/projects" variant="outline">
           View all projects
