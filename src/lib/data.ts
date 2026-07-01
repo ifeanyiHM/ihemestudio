@@ -202,6 +202,7 @@ export const SKILL_GROUPS: SkillGroup[] = [
     label: "Frameworks & Libraries",
     skills: [
       "React",
+      "React Native",
       "Next.js",
       "Tailwind CSS",
       "Express.js",

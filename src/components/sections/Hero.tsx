@@ -73,7 +73,7 @@ export function Hero() {
             "radial-gradient(ellipse 60% 50% at 80% 30%, rgba(0,212,170,0.07) 0%, transparent 70%)",
         }}
       />
-
+      {/* py-section max-w-7xl mx-auto px-6 */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full">
         {/* Left — content */}
         <div>
@@ -104,7 +104,7 @@ export function Hero() {
             </Button>
           </div>
 
-          <div className="flex items-center gap-8 text-slate-muted text-xs font-mono tracking-wide uppercase">
+          <div className="flex flex-wrap items-center gap-2 md:gap-8 text-slate-muted text-xs font-mono tracking-wide uppercase">
             <span>Next.js</span>
             <span className="w-1 h-1 rounded-full bg-white/20" />
             <span>React</span>

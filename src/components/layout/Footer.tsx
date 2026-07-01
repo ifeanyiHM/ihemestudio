@@ -7,6 +7,7 @@ import {
   FiArrowUpRight,
 } from "react-icons/fi";
 import { NAV_ITEMS, FEATURED_PROJECTS } from "@/lib/data";
+import Image from "next/image";
 
 const SOCIAL = [
   { icon: FiGithub, href: "https://github.com/ifeanyiHM", label: "GitHub" },
@@ -36,14 +37,28 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-5">
-            <div className="flex items-center gap-2.5">
+            {/* <div className="flex items-center gap-2.5">
               <div className="w-8 h-8 bg-teal flex items-center justify-center text-ink font-display font-bold text-sm">
                 IS
               </div>
               <span className="font-display font-semibold text-white">
                 Iheme Studio
               </span>
-            </div>
+            </div> */}
+            <Link
+              href="/"
+              className="flex items-center"
+              aria-label="Iheme Studio — Home"
+            >
+              <Image
+                src="/logo.png"
+                alt="Iheme Studio"
+                width={180}
+                height={48}
+                priority
+                className="h-10 w-auto"
+              />
+            </Link>
             <p className="text-slate text-sm leading-relaxed max-w-xs">
               We design and engineer high-performance digital products for
               ambitious teams worldwide. Based in Lagos, Nigeria.
@@ -167,9 +182,7 @@ export function Footer() {
           <p className="text-slate-muted text-xs">
             © {year} Iheme Studio. All rights reserved.
           </p>
-          <p className="text-slate-muted text-xs">
-            Built with Next.js & Tailwind CSS
-          </p>
+          <p className="text-slate-muted text-xs">Lagos, Nigeria</p>
         </div>
       </div>
     </footer>

@@ -34,10 +34,11 @@ export default function ProjectsPage() {
             <h1 className="font-display text-display-xl text-white font-bold leading-[1.05]">
               Products <span className="text-gradient">we&apos;ve shipped</span>
             </h1>
-            <p className="text-slate text-lg leading-relaxed max-w-xl">
+            <p className="text-slate text-lg font-light leading-relaxed max-w-xl">
               A selection of projects we&apos;ve designed, engineered, and
               launched — from enterprise platforms to real estate marketplaces
-              and climate analytics tools.
+              and climate analytics tools. Some client projects are not included
+              due to non-disclosure agreements (NDAs).
             </p>
             <div className="flex items-center gap-6 pt-2 text-2xs font-mono text-slate-muted uppercase tracking-widest">
               <span>

@@ -54,7 +54,7 @@ export function Navbar() {
             aria-label="Iheme Studio — Home"
           >
             <Image
-              src="/logoo.png"
+              src="/logo.png"
               alt="Iheme Studio"
               width={180}
               height={48}

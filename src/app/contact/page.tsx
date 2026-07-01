@@ -73,7 +73,7 @@ export default function ContactPage() {
                   Let&apos;s build{" "}
                   <span className="text-gradient">something great</span>
                 </h1>
-                <p className="text-slate text-lg leading-relaxed max-w-md">
+                <p className="text-slate text-lg font-light leading-relaxed max-w-md">
                   Whether you have a fully scoped product or a rough idea worth
                   exploring, we want to hear about it.
                 </p>
