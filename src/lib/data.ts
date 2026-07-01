@@ -261,6 +261,71 @@ export const SERVICES: Service[] = [
     ],
   },
   {
+    id: "mobile",
+    icon: "HiOutlineDeviceMobile",
+    title: "Mobile App Development",
+    description:
+      "Native-quality mobile experiences built with React Native. We design and engineer cross-platform apps that feel at home on iOS and Android — fast, reliable, and production-ready.",
+    deliverables: [
+      "React Native applications",
+      "iOS & Android deployment",
+      "Offline support & push notifications",
+      "API integration & state management",
+    ],
+  },
+  {
+    id: "ecommerce",
+    icon: "HiOutlineShoppingBag",
+    title: "E-commerce & Marketplaces",
+    description:
+      "Revenue-focused storefronts and multi-vendor marketplaces built to convert. We handle everything from product catalogues and cart logic to payment integration and order management.",
+    deliverables: [
+      "Custom storefront development",
+      "Payment gateway integration",
+      "Inventory & order management",
+      "Multi-vendor marketplace architecture",
+    ],
+  },
+  {
+    id: "landing",
+    icon: "HiOutlineGlobe",
+    title: "Landing Pages & Marketing Sites",
+    description:
+      "High-converting marketing sites that make a strong first impression. Built fast, optimized for SEO, and designed to turn visitors into leads from the moment they land.",
+    deliverables: [
+      "Conversion-focused design",
+      "Core Web Vitals optimization",
+      "SEO & meta configuration",
+      "CMS integration & content management",
+    ],
+  },
+  {
+    id: "redesign",
+    icon: "HiOutlineRefresh",
+    title: "Website Redesign",
+    description:
+      "We take underperforming or outdated digital products and bring them up to modern standards — preserving what works, eliminating what doesn't, and elevating the overall experience.",
+    deliverables: [
+      "UX audit & competitive analysis",
+      "Visual identity refresh",
+      "Performance & accessibility improvements",
+      "Phased migration strategy",
+    ],
+  },
+  {
+    id: "design-system",
+    icon: "HiOutlineColorSwatch",
+    title: "Component Library & Design System",
+    description:
+      "Scalable, documented UI foundations that keep teams consistent across products. We build design systems that serve as a single source of truth for both designers and engineers.",
+    deliverables: [
+      "Tokenized design system",
+      "Reusable React component library",
+      "Storybook documentation",
+      "Figma component library sync",
+    ],
+  },
+  {
     id: "ui-ux",
     icon: "HiOutlineSparkles",
     title: "UI/UX Design",
@@ -273,4 +338,72 @@ export const SERVICES: Service[] = [
       "Interaction design & micro-animations",
     ],
   },
+  {
+    id: "audit",
+    icon: "HiOutlineClipboardCheck",
+    title: "Code Review & Audit",
+    description:
+      "An independent, expert eye on your existing codebase. We identify technical debt, security vulnerabilities, and performance bottlenecks — then deliver a prioritized action plan.",
+    deliverables: [
+      "Architecture & code quality review",
+      "Performance & bundle analysis",
+      "Security vulnerability assessment",
+      "Prioritized remediation roadmap",
+    ],
+  },
 ];
+
+// export const SERVICES: Service[] = [
+//   {
+//     id: "frontend",
+//     icon: "HiOutlineDesktopComputer",
+//     title: "Frontend Engineering",
+//     description:
+//       "We craft pixel-perfect, performance-optimized user interfaces that users love to navigate. Every component is built for accessibility, responsiveness, and long-term maintainability.",
+//     deliverables: [
+//       "React & Next.js applications",
+//       "TypeScript-first codebases",
+//       "Component libraries & design systems",
+//       "Performance audits & optimization",
+//     ],
+//   },
+//   {
+//     id: "fullstack",
+//     icon: "HiOutlineServer",
+//     title: "Full-Stack Development",
+//     description:
+//       "End-to-end product engineering — from database schema to the last pixel of UI. We own the full delivery pipeline so you get coherent, integrated systems rather than stitched-together parts.",
+//     deliverables: [
+//       "Next.js full-stack applications",
+//       "REST API design & integration",
+//       "Supabase & MongoDB backends",
+//       "Authentication & authorization",
+//     ],
+//   },
+//   {
+//     id: "dashboard",
+//     icon: "HiOutlineChartBar",
+//     title: "Dashboards & Data Platforms",
+//     description:
+//       "Complex data, made intelligible. We build analytics interfaces and operational dashboards that surface insights at a glance — giving decision-makers the context they need, instantly.",
+//     deliverables: [
+//       "Real-time data visualization",
+//       "Interactive charts & graphs",
+//       "API-powered analytics dashboards",
+//       "Role-based access & permissions",
+//     ],
+//   },
+//   {
+//     id: "ui-ux",
+//     icon: "HiOutlineSparkles",
+//     title: "UI/UX Design",
+//     description:
+//       "Design is not decoration — it is the product. We apply systematic visual thinking to produce interfaces that communicate trust, guide user behavior, and feel premium at every interaction.",
+//     deliverables: [
+//       "Figma prototypes & wireframes",
+//       "Design system creation",
+//       "User flow mapping",
+//       "Interaction design & micro-animations",
+//     ],
+//   },
+// ];

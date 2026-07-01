@@ -97,9 +97,9 @@ export async function POST(req: Request) {
                                 <img
                                     src="https://ihemestudio.vercel.app/logo.png"
                                     alt="Iheme Studio"
-                                    width="36"
-                                    height="36"
-                                    style="display:block;width:36px;height:36px;"
+                                    width="180"
+                                    height="48"
+                                    style="display:block;width:180px;height:48px;"
                                 />
                                 </td>
                                 
