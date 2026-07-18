@@ -3,6 +3,12 @@ import {
   FiServer,
   FiBarChart2,
   FiZap,
+  FiSmartphone,
+  FiShoppingBag,
+  FiGlobe,
+  FiRefreshCw,
+  FiLayout,
+  FiClipboard,
   FiArrowRight,
 } from "react-icons/fi";
 import { SectionLabel, Button } from "@/components/ui";
@@ -14,6 +20,12 @@ const ICONS: Record<string, React.ElementType> = {
   HiOutlineServer: FiServer,
   HiOutlineChartBar: FiBarChart2,
   HiOutlineSparkles: FiZap,
+  HiOutlineDeviceMobile: FiSmartphone,
+  HiOutlineShoppingBag: FiShoppingBag,
+  HiOutlineGlobe: FiGlobe,
+  HiOutlineRefresh: FiRefreshCw,
+  HiOutlineColorSwatch: FiLayout,
+  HiOutlineClipboardCheck: FiClipboard,
 };
 
 export function ServicesOverview() {

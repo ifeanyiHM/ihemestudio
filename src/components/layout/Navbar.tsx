@@ -37,7 +37,7 @@ export function Navbar() {
             : "bg-transparent border-b border-transparent py-5",
         )}
       >
-        <nav className="max-w-7xl mx-auto px-10 flex items-center justify-between">
+        <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           {/* <Link
             href="/"
@@ -120,7 +120,7 @@ export function Navbar() {
         />
         <div
           className={cn(
-            "absolute inset-0 flex flex-col justify-center px-8 transition-transform duration-400",
+            "absolute inset-0 flex flex-col justify-center px-6 transition-transform duration-400",
             mobileOpen ? "translate-y-0" : "-translate-y-4",
           )}
         >
