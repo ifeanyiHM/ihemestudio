@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import "./design-system.css"; */
-
 /* ─── Base reset & root ──────────────────────────────────────────────────── */
 *,
 *::before,
