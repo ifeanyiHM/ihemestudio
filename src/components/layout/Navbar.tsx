@@ -37,7 +37,7 @@ export function Navbar() {
             : "bg-transparent border-b border-transparent py-5 xxxl:py-6",
         )}
       >
-        <nav className="max-w-7xl xxl:max-w-[95%] mx-auto px-6 flex items-center justify-between">
+        <nav className="site-container flex items-center justify-between">
           {/* Logo */}
 
           <Link
@@ -51,7 +51,7 @@ export function Navbar() {
               width={180}
               height={48}
               priority
-              className="h-10 w-auto"
+              className="h-10 w-auto xl3:h-12 xl4:h-14"
             />
           </Link>
 
@@ -64,7 +64,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "text-[13px] xxxl:text-[1rem] tracking-[0.04em] pb-[2px] border-b transition-colors duration-200",
+                      "text-[13px] xxxl:text-[1rem] xl3:text-[1.05rem] xl4:text-[1.2rem] tracking-[0.04em] pb-[2px] border-b transition-colors duration-200",
                       isActive
                         ? "text-white font-medium border-teal"
                         : "text-slate font-normal border-transparent hover:text-white",
@@ -81,7 +81,7 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden lg:inline-block text-xs xxxl:text-[15px] font-medium tracking-[0.08em] uppercase border border-teal text-teal px-5 py-[9px] xxxl:px-6 xxxl:py-3 transition-all duration-200 hover:bg-teal hover:text-ink"
+              className="hidden lg:inline-block text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[18px] font-medium tracking-[0.08em] uppercase border border-teal text-teal px-5 py-[9px] xxxl:px-6 xxxl:py-3 xl3:px-7 xl3:py-3.5 xl4:px-8 xl4:py-4 transition-all duration-200 hover:bg-teal hover:text-ink"
             >
               Start a Project
             </Link>

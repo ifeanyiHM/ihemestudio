@@ -49,28 +49,31 @@ export function ProjectCard({
 }) {
   if (compact) {
     return (
-      <div className="group flex flex-col sm:flex-row sm:items-center gap-4 p-6 xxxl:p-8 hover:bg-white/[0.02] transition-colors duration-200">
+      <div className="group flex flex-col sm:flex-row sm:items-center gap-4 p-6 xxxl:p-8 xl3:p-9 xl4:p-10 hover:bg-white/[0.02] transition-colors duration-200">
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-3 mb-1 xxxl:mb-2">
-            <span className="text-xs xxxl:text-[15px] font-mono text-slate-muted">
+          <div className="flex items-center gap-3 mb-1 xxxl:mb-2 xl3:mb-3 xl4:mb-4">
+            <span className="text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] font-mono text-slate-muted">
               {project.year}
             </span>
             <span
-              className={`text-2xs xxxl:text-[0.875rem] font-mono px-2 py-0.5 border ${CATEGORY_COLORS[project.category]}`}
+              className={`text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono px-2 py-0.5 border ${CATEGORY_COLORS[project.category]}`}
             >
               {CATEGORY_LABELS[project.category]}
             </span>
           </div>
-          <h3 className="font-display font-semibold text-white text-sm xxxl:text-[17px] group-hover:text-teal/90 transition-colors">
+          <h3 className="font-display font-semibold text-white text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] group-hover:text-teal/90 transition-colors">
             {project.title}
           </h3>
-          <p className="text-slate text-xs xxxl:text-[15px] mt-0.5 xxxl:mt-1 truncate">
+          <p className="text-slate text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] mt-0.5 xxxl:mt-1 xl3:mt-1.5 xl4:mt-2 truncate">
             {project.tagline}
           </p>
         </div>
-        <div className="flex flex-wrap gap-2 sm:max-w-[200px] md:max-w-[250px] xxxl:max-w-[300px]">
+        <div className="flex flex-wrap gap-2 sm:max-w-[200px] md:max-w-[250px] xxxl:max-w-[300px] xl3:max-w-[330px] xl4:max-w-[360px]">
           {project.tags.map((tag) => (
-            <Tag key={tag} className="text-2xs xxxl:text-[0.7rem]">
+            <Tag
+              key={tag}
+              className="text-2xs xxxl:text-[0.7rem] xl3:text-[0.75rem] xl4:text-[0.8rem]"
+            >
               {tag}
             </Tag>
           ))}
@@ -152,10 +155,10 @@ export function ProjectCard({
               "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,212,170,0.04) 0%, transparent 100%)",
           }}
         />
-        <div className="relative space-y-5 xxxl:space-y-7">
-          <div className="flex items-center gap-3 lg:mt-2 xxxl:mt-6">
+        <div className="relative space-y-5 xxxl:space-y-7 xl3:space-y-8 xl4:space-y-9">
+          <div className="flex items-center gap-3 lg:mt-2 xxxl:mt-6 xl3:mt-8 xl4:mt-10">
             <span
-              className={`text-2xs xxxl:text-[0.875rem] font-mono px-2.5 py-1 xxxl:px-3.5 xxxl:py-2 border ${CATEGORY_COLORS[project.category]}`}
+              className={`text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono px-2.5 py-1 xxxl:px-3.5 xxxl:py-2 xl3:px-4 xl3:py-2.5 xl4:px-4.5 xl4:py-2.5 border ${CATEGORY_COLORS[project.category]}`}
             >
               {CATEGORY_LABELS[project.category]}
             </span>
@@ -165,13 +168,13 @@ export function ProjectCard({
           </div>
 
           <div>
-            <h3 className="font-display text-2xl lg:text-3xl xxxl:text-[2rem] text-white font-bold mb-2 group-hover:text-teal/90 transition-colors">
+            <h3 className="font-display text-2xl lg:text-3xl xxxl:text-[2rem] xl3:text-[2.15rem] xl4:text-[2.3rem] text-white font-bold mb-2 group-hover:text-teal/90 transition-colors">
               {project.title}
             </h3>
-            <p className="text-teal/70 text-sm xxxl:text-[17px] font-medium mb-3">
+            <p className="text-teal/70 text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] font-medium mb-3">
               {project.tagline}
             </p>
-            <p className="text-slate text-sm xxxl:text-[16px] leading-relaxed">
+            <p className="text-slate text-sm xxxl:text-[16px] xl3:text-[16.5px] xl4:text-[17px] leading-relaxed">
               {project.description}
             </p>
           </div>
@@ -179,7 +182,7 @@ export function ProjectCard({
           {project.impact && (
             <div className="flex items-start gap-2">
               <span className="w-1 h-1 bg-teal flex-shrink-0 mt-1.5" />
-              <p className="text-xs xxxl:text-[15px] text-slate-muted">
+              <p className="text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] text-slate-muted">
                 {project.impact}
               </p>
             </div>

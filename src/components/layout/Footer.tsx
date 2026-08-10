@@ -33,10 +33,10 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="border-t border-white/[0.06] bg-ink-900">
-      <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6 py-16 xxxl:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 xxxl:gap-[3.5rem] mb-12 xxxl:mb-[3.5rem]">
+      <div className="site-container py-16 xxxl:py-20 xl3:py-24 xl4:py-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 xxxl:gap-[3.5rem] xl3:gap-[4rem] xl4:gap-[4.5rem] mb-12 xxxl:mb-[3.5rem] xl3:mb-[4rem] xl4:mb-[4.5rem]">
           {/* Brand */}
-          <div className="space-y-5 xxxl:space-y-6">
+          <div className="space-y-5 xxxl:space-y-6 xl3:space-y-7 xl4:space-y-8">
             <Link
               href="/"
               className="flex items-center"
@@ -51,11 +51,11 @@ export function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="text-slate text-sm xxxl:text-[17px] leading-relaxed max-w-xs">
+            <p className="text-slate text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] leading-relaxed max-w-xs">
               We design and engineer high-performance digital products for
               ambitious teams worldwide. Based in Lagos, Nigeria.
             </p>
-            <div className="flex items-center gap-3 xxxl:gap-4">
+            <div className="flex items-center gap-3 xxxl:gap-4 xl3:gap-5 xl4:gap-6">
               {SOCIAL.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -63,9 +63,9 @@ export function Footer() {
                   target={href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 xxxl:w-10 xxxl:h-10 bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate hover:text-teal hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
+                  className="w-9 h-9 xxxl:w-10 xxxl:h-10 xl3:w-11 xl3:h-11 xl4:w-12 xl4:h-12 bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate hover:text-teal hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
                 >
-                  <Icon className="text-[15px] xxxl:text-lg" />
+                  <Icon className="text-[15px] xxxl:text-lg xl3:text-[16px] xl4:text-[17px]" />
                 </a>
               ))}
             </div>
@@ -92,17 +92,17 @@ export function Footer() {
 
           {/* Projects */}
           <div>
-            <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest mb-5">
+            <p className="text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono text-teal uppercase tracking-widest mb-5">
               Projects
             </p>
-            <ul className="space-y-3 xxxl:space-y-4">
+            <ul className="space-y-3 xxxl:space-y-4 xl3:space-y-5 xl4:space-y-6">
               {FEATURED_PROJECTS.slice(0, 5).map((project) => (
                 <li key={project.id}>
                   <a
                     href={project.liveUrl ?? `/projects/${project.id}`}
                     target={project.liveUrl ? "_blank" : undefined}
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-1.5 text-slate text-sm xxxl:text-[17px] hover:text-white transition-colors duration-200"
+                    className="group flex items-center gap-1.5 text-slate text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] hover:text-white transition-colors duration-200"
                   >
                     {project.title}
                     <FiArrowUpRight
@@ -128,10 +128,10 @@ export function Footer() {
             <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest mb-5">
               Get in Touch
             </p>
-            <div className="space-y-3 xxxl:space-y-4">
+            <div className="space-y-3 xxxl:space-y-4 xl3:space-y-5 xl4:space-y-6">
               <a
                 href="mailto:ifeanyihm@gmail.com"
-                className="block text-slate text-sm xxxl:text-[17px] hover:text-white transition-colors duration-200"
+                className="block text-slate text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] hover:text-white transition-colors duration-200"
               >
                 ifeanyihm@gmail.com
               </a>
@@ -140,7 +140,7 @@ export function Footer() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-1.5 text-teal text-sm xxxl:text-[17px] font-medium hover:text-teal-glow transition-colors duration-200 mt-2"
+                className="inline-flex items-center gap-1.5 text-teal text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] font-medium hover:text-teal-glow transition-colors duration-200 mt-2"
               >
                 Start a project →
               </Link>
@@ -149,8 +149,8 @@ export function Footer() {
         </div>
 
         {/* Previous Portfolios row */}
-        <div className="border-t border-white/[0.06] py-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mb-4 xxxl:mb-5">
-          <span className="text-slate-muted text-2xs xxxl:text-[0.875rem] font-mono uppercase tracking-widest flex-shrink-0">
+        <div className="border-t border-white/[0.06] py-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 xl3:gap-10 xl4:gap-12 mb-4 xxxl:mb-5 xl3:mb-6 xl4:mb-7">
+          <span className="text-slate-muted text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono uppercase tracking-widest flex-shrink-0">
             Previous Portfolios
           </span>
           <div className="flex flex-wrap items-center gap-3">

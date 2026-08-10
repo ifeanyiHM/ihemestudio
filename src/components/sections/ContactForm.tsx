@@ -62,7 +62,7 @@ function CustomSelect({
         type="button"
         onClick={() => setOpen((p) => !p)}
         className={cn(
-          "w-full flex items-center justify-between px-4 py-3 xxxl:px-5 xxxl:py-4 text-sm xxxl:text-[17px] border transition-all duration-200 focus:outline-none",
+          "w-full flex items-center justify-between px-4 py-3 xxxl:px-5 xxxl:py-4 xl3:px-6 xl3:py-4 xl4:px-7 xl4:py-4 text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] border transition-all duration-200 focus:outline-none",
           open
             ? "border-teal/50 bg-teal-subtle text-white"
             : "border-white/[0.1] bg-white/[0.04] text-slate-muted hover:border-white/[0.2] hover:text-white",
@@ -73,7 +73,7 @@ function CustomSelect({
         </span>
         <FiChevronDown
           className={cn(
-            "text-slate-muted transition-transform duration-200 text-[15px] xxxl:text[18px]",
+            "text-slate-muted transition-transform duration-200 text-[15px] xxxl:text-[18px] xl3:text-[19px] xl4:text-[20px]",
             open && "rotate-180 text-teal",
           )}
         />
@@ -141,15 +141,15 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="flex flex-col items-center justify-center py-16 xxxl:py-20 text-center space-y-5">
-        <div className="w-14 h-14 xxxl:w-16 xxxl:h-16 bg-teal-subtle border border-teal-border flex items-center justify-center">
-          <FiCheck className="text-teal text-[22px] xxxl:text-2xl" />
+      <div className="flex flex-col items-center justify-center py-16 xxxl:py-20 xl3:py-24 xl4:py-28 text-center space-y-5">
+        <div className="w-14 h-14 xxxl:w-16 xxxl:h-16 xl3:w-18 xl3:h-18 xl4:w-20 xl4:h-20 bg-teal-subtle border border-teal-border flex items-center justify-center">
+          <FiCheck className="text-teal text-[22px] xxxl:text-2xl xl3:text-[24px] xl4:text-[26px]" />
         </div>
         <div>
-          <h3 className="font-display text-white font-semibold text-lg xxxl:text-xl mb-1">
+          <h3 className="font-display text-white font-semibold text-lg xxxl:text-xl xl3:text-[1.2rem] xl4:text-[1.25rem] mb-1">
             Message received!
           </h3>
-          <p className="text-slate text-sm xxxl:text-[17px] max-w-xs xxxl:max-w-sm">
+          <p className="text-slate text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] max-w-xs xxxl:max-w-sm">
             Thanks for reaching out. We&apos;ll get back to you within 24 hours.
           </p>
         </div>
@@ -173,16 +173,16 @@ export function ContactForm() {
   }
 
   const inputClass =
-    "w-full bg-white/[0.04] border border-white/[0.1] px-4 py-3 xxxl:px-5 xxxl:py-4 text-white text-sm xxxl:text-[17px] placeholder:text-slate-muted focus:outline-none focus:border-teal/50 focus:bg-teal-subtle transition-all duration-200";
+    "w-full bg-white/[0.04] border border-white/[0.1] px-4 py-3 xxxl:px-5 xxxl:py-4 xl3:px-6 xl3:py-4 xl4:px-7 xl4:py-5 text-white text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] placeholder:text-slate-muted focus:outline-none focus:border-teal/50 focus:bg-teal-subtle transition-all duration-200";
 
   const labelClass =
-    "block text-2xs xxxl:text-[0.875rem] font-mono uppercase tracking-widest text-slate-muted mb-2 xxxl:mb-3";
+    "block text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono uppercase tracking-widest text-slate-muted mb-2 xxxl:mb-3 xl3:mb-4 xl4:mb-5";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {status === "error" && (
-        <div className="flex items-center gap-3 xxxl:gap-4 px-4 py-3 xxxl:px-5 xxxl:py-4 border border-red-500/30 bg-red-500/10 text-red-400 text-sm xxxl:text-[17px]">
-          <FiAlertCircle className="flex-shrink-0 text-[15px] xxxl:text-[18px]" />
+        <div className="flex items-center gap-3 xxxl:gap-4 xl3:gap-5 xl4:gap-6 px-4 py-3 xxxl:px-5 xxxl:py-4 xl3:px-6 xl3:py-5 xl4:px-7 xl4:py-5 border border-red-500/30 bg-red-500/10 text-red-400 text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px]">
+          <FiAlertCircle className="flex-shrink-0 text-[15px] xxxl:text-[18px] xl3:text-[19px] xl4:text-[20px]" />
           Something went wrong. Please try again or email us directly at
           ifeanyihm@gmail.com.
         </div>
@@ -190,7 +190,10 @@ export function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label htmlFor="name" className={labelClass}>
-            Name <span className="text-teal xxxl:text-lg">*</span>
+            Name{" "}
+            <span className="text-teal xxxl:text-lg xl3:text-xl xl4:text-[1.1rem]">
+              *
+            </span>
           </label>
           <input
             id="name"
@@ -205,7 +208,10 @@ export function ContactForm() {
         </div>
         <div>
           <label htmlFor="email" className={labelClass}>
-            Email <span className="text-teal xxxl:text-lg">*</span>
+            Email{" "}
+            <span className="text-teal xxxl:text-lg xl3:text-xl xl4:text-[1.1rem]">
+              *
+            </span>
           </label>
           <input
             id="email"
@@ -266,11 +272,11 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="w-full flex items-center justify-center gap-2 px-6 py-3.5 xxxl:px-7 xxxl:py-4 bg-teal text-ink font-semibold text-sm xxxl:text-[17px] uppercase tracking-[0.08em] transition-all duration-200 hover:bg-teal-glow hover:shadow-teal-sm disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full flex items-center justify-center gap-2 px-6 py-3.5 xxxl:px-7 xxxl:py-4 xl3:px-8 xl3:py-4 xl4:px-9 xl4:py-5 bg-teal text-ink font-semibold text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] uppercase tracking-[0.08em] transition-all duration-200 hover:bg-teal-glow hover:shadow-teal-sm disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {status === "sending" ? (
             <>
-              <span className="w-4 h-4 xxxl:w-5 xxxl:h-5 border-2 border-ink/30 border-t-ink rounded-full animate-spin" />
+              <span className="w-4 h-4 xxxl:w-5 xxxl:h-5 xl3:w-6 xl3:h-6 xl4:w-7 xl4:h-7 border-2 border-ink/30 border-t-ink rounded-full animate-spin" />
               Sending…
             </>
           ) : (
@@ -279,7 +285,7 @@ export function ContactForm() {
             </>
           )}
         </button>
-        <p className="text-2xs xxxl:text-[0.75rem] font-mono text-slate-muted text-center mt-3 xxxl:mt-4 uppercase tracking-widest">
+        <p className="text-2xs xxxl:text-[0.75rem] xl3:text-[0.8rem] xl4:text-[0.85rem] font-mono text-slate-muted text-center mt-3 xxxl:mt-4 xl3:mt-5 xl4:mt-6 uppercase tracking-widest">
           We respond to all enquiries within 24 hours.
         </p>
       </div>

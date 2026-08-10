@@ -24,20 +24,20 @@ const VALUES = [
 export function AboutTeaser() {
   return (
     <section className="py-section border-t border-white/[0.06]">
-      <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6">
+      <div className="site-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
           {/* Left — narrative */}
           <FadeIn direction="up">
-            <div className="space-y-7 xxxl:space-y-8 lg:sticky lg:top-32">
+            <div className="space-y-7 xxxl:space-y-8 xl3:space-y-9 xl4:space-y-10 lg:sticky lg:top-32">
               <SectionLabel>About the Studio</SectionLabel>
 
-              <h2 className="font-display text-display-lg xxxl:text-display-x text-white font-bold leading-tight">
+              <h2 className="font-display text-display-lg xxxl:text-display-x xl3:text-[3.8rem] xl4:text-[4rem] text-white font-bold leading-tight">
                 Passionate about craft.
                 <br />
                 <span className="text-gradient">Obsessed with quality.</span>
               </h2>
 
-              <p className="text-slate xxxl:text-[18px] leading-relaxed max-w-lg">
+              <p className="text-slate xxxl:text-[18px] xl3:text-[18.5px] xl4:text-[19px] leading-relaxed max-w-lg">
                 We are a dedicated software engineering studio that puts
                 craftsmanship at the center of everything we build. Our
                 commitment to personal growth and high standards has helped us
@@ -46,10 +46,10 @@ export function AboutTeaser() {
               </p>
 
               <blockquote className="relative pl-5 border-l border-teal/40">
-                <p className="font-display text-lg xxxl:text-xl text-white/90 italic leading-snug">
+                <p className="font-display text-lg xxxl:text-xl xl3:text-[1.15rem] xl4:text-[1.2rem] text-white/90 italic leading-snug">
                   &ldquo;Let the beauty of what you love be what you do.&rdquo;
                 </p>
-                <cite className="block not-italic text-slate-muted text-xs xxxl:text-[15px] font-mono uppercase tracking-[0.1em] mt-2">
+                <cite className="block not-italic text-slate-muted text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] font-mono uppercase tracking-[0.1em] mt-2">
                   — Rumi
                 </cite>
               </blockquote>

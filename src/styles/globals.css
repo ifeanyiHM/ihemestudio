@@ -53,6 +53,12 @@ body::before {
   z-index: 9999;
 }
 
+@layer components {
+  .site-container {
+    @apply max-w-7xl xxl:max-w-[95%] xl3:max-w-[94%] xl4:max-w-[93%] mx-auto px-6;
+  }
+}
+
 /* ─── Custom utilities ───────────────────────────────────────────────────── */
 @layer utilities {
   .text-gradient {

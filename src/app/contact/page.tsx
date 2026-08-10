@@ -49,7 +49,7 @@ const SOCIALS = [
 
 export default function ContactPage() {
   return (
-    <section className="relative pt-40 pb-section xxxl:pt-48 xxxl:pb-section-xl overflow-hidden">
+    <section className="relative pt-40 pb-section xxxl:pt-48 xl3:pt-52 xl4:pt-56 xxxl:pb-section-xl xl3:pb-[9rem] xl4:pb-[10rem] overflow-hidden">
       <div
         className="absolute inset-0 grid-bg opacity-20 pointer-events-none"
         aria-hidden="true"
@@ -63,17 +63,17 @@ export default function ContactPage() {
         }}
       />
 
-      <div className="relative max-w-7xl xxl:max-w-[95%] mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 xxxl:gap-24 items-start">
+      <div className="relative site-container">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 xxxl:gap-24 xl3:gap-28 xl4:gap-32 items-start">
           <FadeIn direction="up">
-            <div className="space-y-10 xxxl:space-y-12">
-              <div className="space-y-5 xxxl:space-y-7">
+            <div className="space-y-10 xxxl:space-y-12 xl3:space-y-14 xl4:space-y-16">
+              <div className="space-y-5 xxxl:space-y-7 xl3:space-y-8 xl4:space-y-9">
                 <SectionLabel>Get in Touch</SectionLabel>
-                <h1 className="font-display text-display-xl xxxl:text-display-xxl text-white font-bold leading-[1.05]">
+                <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.25rem] xl4:text-[4.5rem] text-white font-bold leading-[1.05]">
                   Let&apos;s build{" "}
                   <span className="text-gradient">something great</span>
                 </h1>
-                <p className="text-slate text-lg xxxl:text-xl font-light leading-relaxed xxxl:leading-loose max-w-md xxxl:max-w-lg">
+                <p className="text-slate text-lg xxxl:text-xl xl3:text-[1.125rem] xl4:text-[1.2rem] font-light leading-relaxed xxxl:leading-loose xl3:leading-[1.9] xl4:leading-[2] max-w-md xxxl:max-w-lg">
                   Whether you have a fully scoped product or a rough idea worth
                   exploring, we want to hear about it.
                 </p>
@@ -83,15 +83,15 @@ export default function ContactPage() {
                 {CONTACT_DETAILS.map((detail) => {
                   const Icon = detail.icon;
                   const content = (
-                    <div className="flex items-center gap-4 p-5 xxxl:p-7 group">
+                    <div className="flex items-center gap-4 p-5 xxxl:p-7 xl3:gap-5 xl4:gap-6 xl3:p-8 xl4:p-9 group">
                       <div className="w-10 h-10 bg-teal-subtle border border-teal-border flex items-center justify-center flex-shrink-0">
-                        <Icon className="text-[16px] xxxl:text-lg text-teal" />
+                        <Icon className="text-[16px] xxxl:text-lg xl3:text-[17px] xl4:text-[18px] text-teal" />
                       </div>
                       <div>
-                        <p className="text-2xs xxxl:text-[0.875rem] font-mono text-slate-muted uppercase tracking-widest mb-0.5">
+                        <p className="text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono text-slate-muted uppercase tracking-widest mb-0.5">
                           {detail.label}
                         </p>
-                        <p className="text-white text-sm xxxl:text-[17px] font-medium group-hover:text-teal/90 transition-colors duration-200">
+                        <p className="text-white text-sm xxxl:text-[17px] xl3:text-[18px] xl4:text-[19px] font-medium group-hover:text-teal/90 transition-colors duration-200">
                           {detail.value}
                         </p>
                       </div>
@@ -112,10 +112,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest mb-4">
+                <p className="text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono text-teal uppercase tracking-widest mb-4">
                   Find us online
                 </p>
-                <div className="flex items-center gap-3 xxxl:gap-4">
+                <div className="flex items-center gap-3 xxxl:gap-4 xl3:gap-5 xl4:gap-6">
                   {SOCIALS.map(({ icon: Icon, href, label }) => (
                     <a
                       key={label}
@@ -125,7 +125,7 @@ export default function ContactPage() {
                       aria-label={label}
                       className="w-11 h-11 bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate hover:text-teal hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
                     >
-                      <Icon className="text-[17px] xxxl:text-lg" />
+                      <Icon className="text-[17px] xxxl:text-lg xl3:text-[18px] xl4:text-[19px]" />
                     </a>
                   ))}
                 </div>

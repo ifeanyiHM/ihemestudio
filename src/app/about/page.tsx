@@ -47,7 +47,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-40 pb-24 xxxl:pt-48 xxxl:pb-32 overflow-hidden border-b border-white/[0.06]">
+      <section className="relative pt-40 pb-24 xxxl:pt-48 xl3:pt-52 xl4:pt-56 xxxl:pb-32 xl3:pb-36 xl4:pb-40 overflow-hidden border-b border-white/[0.06]">
         <div
           className="absolute inset-0 grid-bg opacity-20 pointer-events-none"
           aria-hidden="true"
@@ -60,20 +60,20 @@ export default function AboutPage() {
               "radial-gradient(ellipse 50% 60% at 15% 0%, rgba(0,212,170,0.06) 0%, transparent 70%)",
           }}
         />
-        <div className="relative max-w-7xl xxl:max-w-[95%] mx-auto px-6">
+        <div className="relative site-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <FadeIn direction="up">
-              <div className="space-y-7 xxxl:space-y-9">
+              <div className="space-y-7 xxxl:space-y-9 xl3:space-y-10 xl4:space-y-12">
                 <SectionLabel>About the Studio</SectionLabel>
-                <h1 className="font-display text-display-xl xxxl:text-display-xxl text-white font-bold leading-[1.05]">
+                <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.25rem] xl4:text-[4.5rem] text-white font-bold leading-[1.05]">
                   We engineer products{" "}
                   <em className="text-gradient not-italic">with purpose.</em>
                 </h1>
-                <div className="flex items-center gap-2 text-slate-muted text-sm xxxl:text-[15px]">
-                  <FiMapPin className="text-[14px] xxxl:text-base text-teal/70" />
+                <div className="flex items-center gap-2 text-slate-muted text-sm xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px]">
+                  <FiMapPin className="text-[14px] xxxl:text-base xl3:text-[15px] xl4:text-[16px] text-teal/70" />
                   <span>Lagos, Nigeria · Working with clients worldwide</span>
                 </div>
-                <div className="flex items-center gap-3 xxxl:gap-4">
+                <div className="flex items-center gap-3 xxxl:gap-4 xl3:gap-5 xl4:gap-6">
                   {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
                     <a
                       key={label}
@@ -91,7 +91,7 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn direction="up" delay={100}>
-              <div className="space-y-5 xxxl:space-y-7 xxxl:text-[18px] text-slate leading-relaxed xxxl:leading-8">
+              <div className="space-y-5 xxxl:space-y-7 xl3:space-y-8 xl4:space-y-9 xxxl:text-[18px] xl3:text-[18.5px] xl4:text-[19px] text-slate leading-relaxed xxxl:leading-8">
                 <p>
                   Iheme Studio is a software engineering organization built on a
                   simple belief: quality craftsmanship and relentless attention
@@ -107,11 +107,11 @@ export default function AboutPage() {
                   technology.
                 </p>
                 <blockquote className="relative pl-5 border-l border-teal/40">
-                  <p className="font-display text-lg xxxl:text-xl text-white/90 italic leading-snug">
+                  <p className="font-display text-lg xxxl:text-xl xl3:text-[1.125rem] xl4:text-[1.15rem] text-white/90 italic leading-snug">
                     &ldquo;Let the beauty of what you love be what you
                     do.&rdquo;
                   </p>
-                  <cite className="block not-italic text-slate-muted text-xs xxxl:text-[15px] font-mono uppercase tracking-[0.1em] mt-2">
+                  <cite className="block not-italic text-slate-muted text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] font-mono uppercase tracking-[0.1em] mt-2">
                     — Rumi
                   </cite>
                 </blockquote>
@@ -123,7 +123,7 @@ export default function AboutPage() {
 
       {/* Stats */}
       <section className="py-16 border-b border-white/[0.06]">
-        <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6">
+        <div className="site-container">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 70} direction="up">
@@ -148,7 +148,7 @@ export default function AboutPage() {
 
       {/* Skills */}
       <section className="py-section border-b border-white/[0.06]">
-        <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6">
+        <div className="site-container">
           <FadeIn direction="up">
             <div className="mb-16 space-y-3">
               <SectionLabel>Technical Skills</SectionLabel>
@@ -196,8 +196,8 @@ export default function AboutPage() {
       </section>
 
       {/* Resume */}
-      <section className="py-section xxxl:py-36 border-b border-white/[0.06]">
-        <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6">
+      <section className="py-section xxxl:py-36 xl3:py-[10rem] xl4:py-[11rem] border-b border-white/[0.06]">
+        <div className="site-container">
           <div className="relative border border-teal-border bg-ink-800/40 overflow-hidden">
             <div
               className="absolute inset-0 pointer-events-none"

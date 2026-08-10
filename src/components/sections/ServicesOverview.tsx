@@ -31,15 +31,15 @@ const ICONS: Record<string, React.ElementType> = {
 export function ServicesOverview() {
   return (
     <section className="py-section border-t border-white/[0.06]">
-      <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6">
+      <div className="site-container">
         <FadeIn direction="up">
           <div className="max-w-2xl mb-16 space-y-4">
             <SectionLabel>What We Do</SectionLabel>
-            <h2 className="font-display text-display-lg xxxl:text-display-x text-white font-bold leading-tight">
+            <h2 className="font-display text-display-lg xxxl:text-display-x xl3:text-[3.8rem] xl4:text-[4rem] text-white font-bold leading-tight">
               End-to-end digital <br />
               <span className="text-gradient">engineering</span>
             </h2>
-            <p className="text-slate xxxl:text-[18px] leading-relaxed">
+            <p className="text-slate xxxl:text-[18px] xl3:text-[18.5px] xl4:text-[19px] leading-relaxed">
               From the first line of architecture to the final pixel of UI — we
               own the full delivery pipeline so you get coherent, integrated
               systems.
@@ -65,7 +65,7 @@ export function ServicesOverview() {
                   {/* Content */}
                   <div>
                     <div className="flex items-center gap-4 xxxl:gap-5 mb-4 xxxl:mb-5">
-                      <div className="w-10 h-10 xxxl:w-11 xxxl:h-11 bg-teal-subtle border border-teal-border flex items-center justify-center group-hover:bg-teal group-hover:border-teal transition-all duration-300 flex-shrink-0">
+                      <div className="w-10 h-10 xxxl:w-11 xxxl:h-11 xl3:w-14 xl3:h-14 xl4:w-15 xl4:h-15 bg-teal-subtle border border-teal-border flex items-center justify-center group-hover:bg-teal group-hover:border-teal transition-all duration-300 flex-shrink-0">
                         <Icon
                           size={18}
                           className="text-teal group-hover:text-ink transition-colors duration-300"
@@ -76,7 +76,7 @@ export function ServicesOverview() {
                       </h3>
                     </div>
 
-                    <p className="text-slate text-sm xxxl:text-[17px] leading-relaxed max-w-xl mb-5">
+                    <p className="text-slate text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] leading-relaxed max-w-xl mb-5">
                       {service.description}
                     </p>
 
@@ -84,7 +84,7 @@ export function ServicesOverview() {
                       {service.deliverables.map((d) => (
                         <li
                           key={d}
-                          className="flex items-center gap-2 text-xs xxxl:text-[15px] text-slate-muted font-mono"
+                          className="flex items-center gap-2 text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] text-slate-muted font-mono"
                         >
                           <span className="w-1 h-1 xxxl:w-2 xxxl:h-2 bg-teal/50 flex-shrink-0" />
                           {d}
