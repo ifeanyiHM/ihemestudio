@@ -47,7 +47,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-40 pb-24 overflow-hidden border-b border-white/[0.06]">
+      <section className="relative pt-40 pb-24 xxxl:pt-48 xxxl:pb-32 overflow-hidden border-b border-white/[0.06]">
         <div
           className="absolute inset-0 grid-bg opacity-20 pointer-events-none"
           aria-hidden="true"
@@ -60,20 +60,20 @@ export default function AboutPage() {
               "radial-gradient(ellipse 50% 60% at 15% 0%, rgba(0,212,170,0.06) 0%, transparent 70%)",
           }}
         />
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative max-w-7xl xxl:max-w-[95%] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <FadeIn direction="up">
-              <div className="space-y-7">
+              <div className="space-y-7 xxxl:space-y-9">
                 <SectionLabel>About the Studio</SectionLabel>
-                <h1 className="font-display text-display-xl text-white font-bold leading-[1.05]">
+                <h1 className="font-display text-display-xl xxxl:text-display-xxl text-white font-bold leading-[1.05]">
                   We engineer products{" "}
                   <em className="text-gradient not-italic">with purpose.</em>
                 </h1>
-                <div className="flex items-center gap-2 text-slate-muted text-sm">
-                  <FiMapPin size={14} className="text-teal/70" />
+                <div className="flex items-center gap-2 text-slate-muted text-sm xxxl:text-[15px]">
+                  <FiMapPin className="text-[14px] xxxl:text-base text-teal/70" />
                   <span>Lagos, Nigeria · Working with clients worldwide</span>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 xxxl:gap-4">
                   {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
                     <a
                       key={label}
@@ -81,9 +81,9 @@ export default function AboutPage() {
                       target={href.startsWith("mailto") ? undefined : "_blank"}
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="w-10 h-10 bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate hover:text-teal hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
+                      className="w-10 h-10 xxxl:w-11 xxxl:h-11 bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate hover:text-teal hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
                     >
-                      <Icon size={16} />
+                      <Icon className="text-base xxxl:text-lg" />
                     </a>
                   ))}
                 </div>
@@ -91,7 +91,7 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn direction="up" delay={100}>
-              <div className="space-y-5 text-slate leading-relaxed">
+              <div className="space-y-5 xxxl:space-y-7 xxxl:text-[18px] text-slate leading-relaxed xxxl:leading-8">
                 <p>
                   Iheme Studio is a software engineering organization built on a
                   simple belief: quality craftsmanship and relentless attention
@@ -107,11 +107,11 @@ export default function AboutPage() {
                   technology.
                 </p>
                 <blockquote className="relative pl-5 border-l border-teal/40">
-                  <p className="font-display text-lg text-white/90 italic leading-snug">
+                  <p className="font-display text-lg xxxl:text-xl text-white/90 italic leading-snug">
                     &ldquo;Let the beauty of what you love be what you
                     do.&rdquo;
                   </p>
-                  <cite className="block not-italic text-slate-muted text-xs font-mono uppercase tracking-[0.1em] mt-2">
+                  <cite className="block not-italic text-slate-muted text-xs xxxl:text-[15px] font-mono uppercase tracking-[0.1em] mt-2">
                     — Rumi
                   </cite>
                 </blockquote>
@@ -123,7 +123,7 @@ export default function AboutPage() {
 
       {/* Stats */}
       <section className="py-16 border-b border-white/[0.06]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4">
             {STATS.map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 70} direction="up">
@@ -133,10 +133,10 @@ export default function AboutPage() {
                   }`}
                 >
                   <span className="block w-6 h-px bg-teal/50 mb-4 mx-auto md:mx-0 transition-all duration-300 group-hover:w-10 group-hover:bg-teal" />
-                  <p className="font-display text-[clamp(2rem,5vw,3rem)] font-bold text-white leading-none mb-2 tracking-tight">
+                  <p className="font-display text-[clamp(2rem,5vw,3rem)] xxxl:text-[3.5rem] font-bold text-white leading-none mb-2 tracking-tight">
                     {stat.value}
                   </p>
-                  <p className="text-slate-muted text-xs font-mono uppercase tracking-[0.12em]">
+                  <p className="text-slate-muted text-xs xxxl:text-[15px] font-mono uppercase tracking-[0.12em]">
                     {stat.label}
                   </p>
                 </div>
@@ -148,11 +148,11 @@ export default function AboutPage() {
 
       {/* Skills */}
       <section className="py-section border-b border-white/[0.06]">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6">
           <FadeIn direction="up">
             <div className="mb-16 space-y-3">
               <SectionLabel>Technical Skills</SectionLabel>
-              <h2 className="font-display text-display-md text-white font-bold">
+              <h2 className="font-display text-display-md xxxl:text-display-x text-white font-bold">
                 Our technology stack
               </h2>
             </div>
@@ -160,13 +160,13 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <FadeIn direction="up" delay={80}>
-              <div className="space-y-8">
+              <div className="space-y-8 xxxl:space-y-10">
                 {SKILL_GROUPS.map((group) => (
                   <div key={group.label}>
-                    <p className="text-2xs font-mono text-teal uppercase tracking-widest mb-3">
+                    <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest mb-3 xxxl:mb-4">
                       {group.label}
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 xxxl:gap-3">
                       {group.skills.map((skill) => (
                         <Tag key={skill}>{skill}</Tag>
                       ))}
@@ -177,8 +177,8 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn direction="up" delay={140}>
-              <div className="space-y-5">
-                <p className="text-2xs font-mono text-teal uppercase tracking-widest mb-3">
+              <div className="space-y-5 xxxl:space-y-7">
+                <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest mb-3 xxxl:mb-4">
                   Competency
                 </p>
                 {SKILLS_PROFICIENCY.map((s, i) => (
@@ -196,8 +196,8 @@ export default function AboutPage() {
       </section>
 
       {/* Resume */}
-      <section className="py-section border-b border-white/[0.06]">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-section xxxl:py-36 border-b border-white/[0.06]">
+        <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6">
           <div className="relative border border-teal-border bg-ink-800/40 overflow-hidden">
             <div
               className="absolute inset-0 pointer-events-none"
@@ -207,14 +207,14 @@ export default function AboutPage() {
               }}
             />
             <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center p-10 md:p-14">
-              <div className="space-y-2">
-                <p className="text-2xs font-mono text-teal uppercase tracking-widest">
+              <div className="space-y-2 xxxl:space-y-3">
+                <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest">
                   Resume
                 </p>
-                <h3 className="font-display text-white font-bold text-2xl md:text-3xl">
+                <h3 className="font-display text-white font-bold text-2xl md:text-3xl xxxl:text-4xl">
                   Want the full picture?
                 </h3>
-                <p className="text-slate text-sm leading-relaxed max-w-md">
+                <p className="text-slate text-sm xxxl:text-[17px] leading-relaxed max-w-md xxxl:max-w-lg">
                   Download our resume for a complete overview of experience,
                   skills, and past engagements.
                 </p>
@@ -226,7 +226,8 @@ export default function AboutPage() {
                   variant="primary"
                   size="lg"
                 >
-                  Download Resume <FiArrowRight size={15} />
+                  Download Resume{" "}
+                  <FiArrowRight className="text-[15px] xxxl:text-lg" />
                 </Button>
               </div>
             </div>

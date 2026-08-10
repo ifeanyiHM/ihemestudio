@@ -3,8 +3,8 @@ import { Button } from "@/components/ui";
 
 export function CTASection() {
   return (
-    <section className="py-section border-t border-white/[0.06]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-section xxxl:py-36 border-t border-white/[0.06]">
+      <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6">
         <div className="relative overflow-hidden border border-teal-border bg-ink-800/60">
           <div
             className="absolute inset-0 pointer-events-none"
@@ -45,13 +45,14 @@ export function CTASection() {
                 variant="primary"
                 className="w-full lg:w-auto justify-center"
               >
-                Start a Conversation <FiArrowRight size={16} />
+                Start a Conversation{" "}
+                <FiArrowRight className="text-[15px] xxxl:text-lg" />
               </Button>
               <a
                 href="mailto:ifeanyihm@gmail.com"
                 className="flex items-center gap-2 text-slate hover:text-white transition-colors duration-200 text-sm font-mono"
               >
-                <FiMail size={15} className="text-teal/70" />
+                <FiMail className="text-[15px] xxxl:text-lg text-teal/70" />
                 ifeanyihm@gmail.com
               </a>
             </div>

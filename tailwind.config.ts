@@ -42,10 +42,15 @@ const config: Config = {
           "4.5rem",
           { lineHeight: "1.05", letterSpacing: "-0.03em" },
         ],
+        "display-xxl": [
+          "4rem",
+          { lineHeight: "1.05", letterSpacing: "-0.03em" },
+        ],
         "display-xl": [
           "3.5rem",
           { lineHeight: "1.08", letterSpacing: "-0.025em" },
         ],
+        "display-x": ["3rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
         "display-lg": [
           "2.75rem",
           { lineHeight: "1.1", letterSpacing: "-0.02em" },
@@ -61,6 +66,7 @@ const config: Config = {
       },
       spacing: {
         section: "7rem",
+        "section-xl": "9rem",
         "section-sm": "4rem",
       },
       borderRadius: {
@@ -112,6 +118,12 @@ const config: Config = {
         card: "0 1px 3px rgba(0,0,0,0.5), 0 8px 32px rgba(0,0,0,0.3)",
         "card-hover":
           "0 4px 24px rgba(0,0,0,0.6), 0 0 40px rgba(0,212,170,0.12)",
+      },
+      screens: {
+        xxl: "1440px",
+        xxxl: "1536px",
+        xl3: "1680px",
+        xl4: "1920px",
       },
     },
   },

@@ -33,21 +33,13 @@ export function Navbar() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           scrolled
-            ? "bg-ink/90 backdrop-blur-xl border-b border-white/[0.06] py-3"
-            : "bg-transparent border-b border-transparent py-5",
+            ? "bg-ink/90 backdrop-blur-xl border-b border-white/[0.06] py-3 xxxl:py-4"
+            : "bg-transparent border-b border-transparent py-5 xxxl:py-6",
         )}
       >
-        <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <nav className="max-w-7xl xxl:max-w-[95%] mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          {/* <Link
-            href="/"
-            className="flex items-center"
-            aria-label="Iheme Studio — Home"
-          >
-            <span className="font-body text-sm font-medium tracking-[0.06em] uppercase text-white">
-              Iheme<span className="font-light"> Studio</span>
-            </span>
-          </Link> */}
+
           <Link
             href="/"
             className="flex items-center"
@@ -64,7 +56,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden md:flex items-center gap-9">
+          <ul className="hidden lg:flex items-center gap-9">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -72,7 +64,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "text-[13px] tracking-[0.04em] pb-[2px] border-b transition-colors duration-200",
+                      "text-[13px] xxxl:text-[1rem] tracking-[0.04em] pb-[2px] border-b transition-colors duration-200",
                       isActive
                         ? "text-white font-medium border-teal"
                         : "text-slate font-normal border-transparent hover:text-white",
@@ -89,13 +81,13 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden md:inline-block text-xs font-medium tracking-[0.08em] uppercase border border-teal text-teal px-5 py-[9px] transition-all duration-200 hover:bg-teal hover:text-ink"
+              className="hidden lg:inline-block text-xs xxxl:text-[15px] font-medium tracking-[0.08em] uppercase border border-teal text-teal px-5 py-[9px] xxxl:px-6 xxxl:py-3 transition-all duration-200 hover:bg-teal hover:text-ink"
             >
               Start a Project
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 rounded-lg text-slate hover:text-white hover:bg-white/[0.05] transition-colors"
+              className="lg:hidden p-2 rounded-lg text-slate hover:text-white hover:bg-white/[0.05] transition-colors"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
             >
@@ -108,7 +100,7 @@ export function Navbar() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "fixed inset-0 z-40 md:hidden transition-all duration-300",
+          "fixed inset-0 z-40 lg:hidden transition-all duration-300",
           mobileOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none",

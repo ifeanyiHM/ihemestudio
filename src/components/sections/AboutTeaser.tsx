@@ -24,20 +24,20 @@ const VALUES = [
 export function AboutTeaser() {
   return (
     <section className="py-section border-t border-white/[0.06]">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl xxl:max-w-[95%] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
           {/* Left — narrative */}
           <FadeIn direction="up">
-            <div className="space-y-7 lg:sticky lg:top-32">
+            <div className="space-y-7 xxxl:space-y-8 lg:sticky lg:top-32">
               <SectionLabel>About the Studio</SectionLabel>
 
-              <h2 className="font-display text-display-lg text-white font-bold leading-tight">
+              <h2 className="font-display text-display-lg xxxl:text-display-x text-white font-bold leading-tight">
                 Passionate about craft.
                 <br />
                 <span className="text-gradient">Obsessed with quality.</span>
               </h2>
 
-              <p className="text-slate leading-relaxed max-w-md">
+              <p className="text-slate xxxl:text-[18px] leading-relaxed max-w-lg">
                 We are a dedicated software engineering studio that puts
                 craftsmanship at the center of everything we build. Our
                 commitment to personal growth and high standards has helped us
@@ -46,15 +46,15 @@ export function AboutTeaser() {
               </p>
 
               <blockquote className="relative pl-5 border-l border-teal/40">
-                <p className="font-display text-lg text-white/90 italic leading-snug">
+                <p className="font-display text-lg xxxl:text-xl text-white/90 italic leading-snug">
                   &ldquo;Let the beauty of what you love be what you do.&rdquo;
                 </p>
-                <cite className="block not-italic text-slate-muted text-xs font-mono uppercase tracking-[0.1em] mt-2">
+                <cite className="block not-italic text-slate-muted text-xs xxxl:text-[15px] font-mono uppercase tracking-[0.1em] mt-2">
                   — Rumi
                 </cite>
               </blockquote>
 
-              <div className="flex items-center gap-2 text-slate-muted text-sm pt-1">
+              <div className="flex items-center gap-2 text-slate-muted text-sm xxxl:text-[17px] pt-1">
                 <FiMapPin size={14} className="text-teal/70" />
                 <span>Based in Lagos, Nigeria. Working worldwide.</span>
               </div>
@@ -70,18 +70,18 @@ export function AboutTeaser() {
             {VALUES.map((value, i) => (
               <FadeIn key={value.title} delay={i * 70} direction="up">
                 <div
-                  className={`group grid grid-cols-[64px_1fr] gap-5 py-7 ${
+                  className={`group grid grid-cols-[64px_1fr] gap-5 xxxl:gap-6 py-7 xxxl:py-8 ${
                     i !== 0 ? "border-t border-white/[0.06]" : ""
                   }`}
                 >
-                  <span className="font-display text-3xl font-bold text-white/[0.08] group-hover:text-teal/25 transition-colors duration-300 select-none leading-none">
+                  <span className="font-display text-3xl xxxl:text-4xl font-bold text-white/[0.08] group-hover:text-teal/25 transition-colors duration-300 select-none leading-none">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 className="font-display font-semibold text-white text-base mb-2 group-hover:text-teal/90 transition-colors duration-300">
+                    <h3 className="font-display font-semibold text-white text-base xxxl:text-lg mb-2 xxxl:mb-3 group-hover:text-teal/90 transition-colors duration-300">
                       {value.title}
                     </h3>
-                    <p className="text-slate-muted text-sm leading-relaxed max-w-sm">
+                    <p className="text-slate-muted text-sm xxxl:text-[17px] leading-relaxed max-w-sm xxxl:max-w-md group-hover:text-slate transition-colors duration-300">
                       {value.body}
                     </p>
                   </div>

@@ -5,7 +5,7 @@ import { FEATURED_PROJECTS } from "@/lib/data";
 
 export function FeaturedProjects() {
   return (
-    <section className="py-section max-w-7xl mx-auto px-6">
+    <section className="py-section xxxl:py-36 max-w-7xl xxl:max-w-[95%] mx-auto px-6">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
         {/* <div className="space-y-4 max-w-xl">
@@ -14,14 +14,14 @@ export function FeaturedProjects() {
             Products we&apos;ve <span className="text-gradient">shipped</span>
           </h2>
         </div> */}
-        <div className="space-y-4 max-w-xl">
+        <div className="space-y-4 max-w-xl xxxl:max-w-2xl">
           <SectionLabel>Selected Work</SectionLabel>
 
-          <h2 className="font-display text-display-lg text-white font-bold leading-tight">
+          <h2 className="font-display text-display-lg xxxl:text-display-x text-white font-bold leading-tight">
             Products we&apos;ve <span className="text-gradient">shipped</span>
           </h2>
 
-          <p className="text-slate leading-relaxed">
+          <p className="text-slate xxxl:text-[18px] leading-relaxed">
             Portfolio excludes products covered by non-disclosure agreements
             (NDAs).
           </p>

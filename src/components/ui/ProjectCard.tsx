@@ -49,28 +49,28 @@ export function ProjectCard({
 }) {
   if (compact) {
     return (
-      <div className="group flex flex-col sm:flex-row sm:items-center gap-4 p-6 hover:bg-white/[0.02] transition-colors duration-200">
+      <div className="group flex flex-col sm:flex-row sm:items-center gap-4 p-6 xxxl:p-8 hover:bg-white/[0.02] transition-colors duration-200">
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-3 mb-1">
-            <span className="text-xs font-mono text-slate-muted">
+          <div className="flex items-center gap-3 mb-1 xxxl:mb-2">
+            <span className="text-xs xxxl:text-[15px] font-mono text-slate-muted">
               {project.year}
             </span>
             <span
-              className={`text-2xs font-mono px-2 py-0.5 border ${CATEGORY_COLORS[project.category]}`}
+              className={`text-2xs xxxl:text-[0.875rem] font-mono px-2 py-0.5 border ${CATEGORY_COLORS[project.category]}`}
             >
               {CATEGORY_LABELS[project.category]}
             </span>
           </div>
-          <h3 className="font-display font-semibold text-white text-sm group-hover:text-teal/90 transition-colors">
+          <h3 className="font-display font-semibold text-white text-sm xxxl:text-[17px] group-hover:text-teal/90 transition-colors">
             {project.title}
           </h3>
-          <p className="text-slate text-xs mt-0.5 truncate">
+          <p className="text-slate text-xs xxxl:text-[15px] mt-0.5 xxxl:mt-1 truncate">
             {project.tagline}
           </p>
         </div>
-        <div className="flex flex-wrap gap-2 sm:max-w-[200px] md:max-w-[250px]">
+        <div className="flex flex-wrap gap-2 sm:max-w-[200px] md:max-w-[250px] xxxl:max-w-[300px]">
           {project.tags.map((tag) => (
-            <Tag key={tag} className="text-2xs">
+            <Tag key={tag} className="text-2xs xxxl:text-[0.7rem]">
               {tag}
             </Tag>
           ))}
@@ -84,7 +84,7 @@ export function ProjectCard({
               aria-label={`${project.title} live site`}
               className="p-2 text-slate hover:text-teal hover:bg-teal-subtle transition-all duration-200"
             >
-              <FiArrowUpRight size={15} />
+              <FiArrowUpRight className="text-[15px] xxxl:text-lg" />
             </a>
           )}
           {project.codeUrl && (
@@ -95,7 +95,7 @@ export function ProjectCard({
               aria-label={`${project.title} source code`}
               className="p-2 text-slate hover:text-white hover:bg-white/[0.05] transition-all duration-200"
             >
-              <FiGithub size={15} />
+              <FiGithub className="text-[15px] xxxl:text-lg" />
             </a>
           )}
         </div>
@@ -110,15 +110,15 @@ export function ProjectCard({
         className={`relative ${reverse ? "lg:order-2" : "lg:order-1"} border-b lg:border-b-0 border-white/[0.06] ${reverse ? "lg:border-l" : "lg:border-r"}`}
       >
         {/* Chrome bar */}
-        <div className="flex items-center gap-3 px-4 py-3 bg-ink-900/60 border-b border-white/[0.06]">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 bg-white/[0.12]" />
-            <span className="w-2.5 h-2.5 bg-white/[0.12]" />
-            <span className="w-2.5 h-2.5 bg-white/[0.12]" />
+        <div className="flex items-center gap-3 px-4 py-3 xxxl:py-4 bg-ink-900/60 border-b border-white/[0.06]">
+          <div className="flex items-center gap-1.5 xxxl:gap-2.5">
+            <span className="w-2.5 h-2.5 xxxl:w-3.5 xxxl:h-3.5 bg-white/[0.12]" />
+            <span className="w-2.5 h-2.5 xxxl:w-3.5 xxxl:h-3.5 bg-white/[0.12]" />
+            <span className="w-2.5 h-2.5 xxxl:w-3.5 xxxl:h-3.5 bg-white/[0.12]" />
           </div>
           <div className="flex-1 flex items-center justify-center">
-            <span className="inline-flex items-center gap-2 px-3 py-1 border border-white/[0.08] bg-white/[0.03] text-2xs font-mono text-slate-muted">
-              <span className="w-1.5 h-1.5 bg-teal/60" />
+            <span className="inline-flex items-center gap-2 px-3 py-1 xxxl:px-4 xxxl:py-2 border border-white/[0.08] bg-white/[0.03] text-2xs xxxl:text-[0.875rem] font-mono text-slate-muted">
+              <span className="w-1.5 h-1.5 xxxl:w-2.5 xxxl:h-2.5 bg-teal/60" />
               {getProjectDomain(project)}
             </span>
           </div>
@@ -152,26 +152,26 @@ export function ProjectCard({
               "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,212,170,0.04) 0%, transparent 100%)",
           }}
         />
-        <div className="relative space-y-5">
-          <div className="flex items-center gap-3">
+        <div className="relative space-y-5 xxxl:space-y-7">
+          <div className="flex items-center gap-3 lg:mt-2 xxxl:mt-6">
             <span
-              className={`text-2xs font-mono px-2.5 py-1 border ${CATEGORY_COLORS[project.category]}`}
+              className={`text-2xs xxxl:text-[0.875rem] font-mono px-2.5 py-1 xxxl:px-3.5 xxxl:py-2 border ${CATEGORY_COLORS[project.category]}`}
             >
               {CATEGORY_LABELS[project.category]}
             </span>
-            <span className="text-slate-muted text-2xs font-mono">
+            <span className="text-slate-muted text-2xs xxxl:text-[0.875rem] font-mono">
               {project.year}
             </span>
           </div>
 
           <div>
-            <h3 className="font-display text-2xl lg:text-3xl text-white font-bold mb-2 group-hover:text-teal/90 transition-colors">
+            <h3 className="font-display text-2xl lg:text-3xl xxxl:text-[2rem] text-white font-bold mb-2 group-hover:text-teal/90 transition-colors">
               {project.title}
             </h3>
-            <p className="text-teal/70 text-sm font-medium mb-3">
+            <p className="text-teal/70 text-sm xxxl:text-[17px] font-medium mb-3">
               {project.tagline}
             </p>
-            <p className="text-slate text-sm leading-relaxed">
+            <p className="text-slate text-sm xxxl:text-[16px] leading-relaxed">
               {project.description}
             </p>
           </div>
@@ -179,7 +179,9 @@ export function ProjectCard({
           {project.impact && (
             <div className="flex items-start gap-2">
               <span className="w-1 h-1 bg-teal flex-shrink-0 mt-1.5" />
-              <p className="text-xs text-slate-muted">{project.impact}</p>
+              <p className="text-xs xxxl:text-[15px] text-slate-muted">
+                {project.impact}
+              </p>
             </div>
           )}
 
@@ -195,9 +197,10 @@ export function ProjectCard({
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm text-white font-medium px-4 py-2 bg-teal/10 border border-teal-border hover:bg-teal hover:text-ink transition-all duration-200"
+                className="flex items-center gap-1.5 text-sm xxxl:text-[17px] text-white font-medium px-4 py-2 xxxl:px-5 xxxl:py-3 bg-teal/10 border border-teal-border hover:bg-teal hover:text-ink transition-all duration-200"
               >
-                Live Site <FiArrowUpRight size={13} />
+                Live Site{" "}
+                <FiArrowUpRight className="text-[13px] xxxl:text-base" />
               </a>
             )}
             {project.codeUrl && (
@@ -205,9 +208,9 @@ export function ProjectCard({
                 href={project.codeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm text-slate hover:text-white px-4 py-2 bg-white/[0.04] border border-white/[0.08] hover:border-white/20 transition-all duration-200"
+                className="flex items-center gap-1.5 text-sm xxxl:text-[17px] text-slate hover:text-white px-4 py-2 xxxl:px-5 xxxl:py-3 bg-white/[0.04] border border-white/[0.08] hover:border-white/20 transition-all duration-200"
               >
-                <FiGithub size={13} /> Code
+                <FiGithub className="text-[13px] xxxl:text-base" /> Code
               </a>
             )}
           </div>

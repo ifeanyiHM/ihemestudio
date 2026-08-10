@@ -34,9 +34,9 @@ export function Button({
     outline: "border border-teal text-teal hover:bg-teal hover:text-ink",
   };
   const sizes = {
-    sm: "text-xs px-3 py-1.5",
-    md: "text-xs px-5 py-2.5",
-    lg: "text-sm px-7 py-3.5",
+    sm: "text-xs xxxl:text-[15px] px-3 py-1.5 xxxl:px-4 xxxl:py-2.5",
+    md: "text-xs xxxl:text-[15px] px-5 py-2.5 xxxl:px-6 xxxl:py-3.5",
+    lg: "text-sm xxxl:text-[17px] px-7 py-3.5 xxxl:px-8 xxxl:py-4.5",
   };
   const classes = cn(base, variants[variant], sizes[size], className);
   if (href) {
@@ -75,7 +75,7 @@ export function Tag({
   return (
     <span
       className={cn(
-        "inline-flex items-center px-2.5 py-1 rounded-md text-2xs font-mono font-medium bg-white/[0.05] border border-white/[0.08] text-slate-light",
+        "inline-flex items-center px-2.5 py-1 xxxl:px-3.5 xxxl:py-1.5 rounded-md text-2xs xxxl:text-[0.7rem] font-mono font-medium bg-white/[0.05] border border-white/[0.08] text-slate-light",
         className,
       )}
     >
@@ -95,7 +95,7 @@ export function SectionLabel({
   return (
     <p
       className={cn(
-        "text-2xs font-mono text-teal uppercase tracking-[0.2em] flex items-center gap-2",
+        "text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-[0.2em] flex items-center gap-2",
         className,
       )}
     >
