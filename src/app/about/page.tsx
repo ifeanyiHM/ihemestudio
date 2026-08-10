@@ -73,7 +73,7 @@ export default function AboutPage() {
                   <FiMapPin className="text-[14px] xxxl:text-base xl3:text-[15px] xl4:text-[16px] text-teal/70" />
                   <span>Lagos, Nigeria · Working with clients worldwide</span>
                 </div>
-                <div className="flex items-center gap-3 xxxl:gap-4 xl3:gap-5 xl4:gap-6">
+                <div className="row-inline-sm">
                   {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
                     <a
                       key={label}
@@ -196,7 +196,7 @@ export default function AboutPage() {
       </section>
 
       {/* Resume */}
-      <section className="py-section xxxl:py-36 xl3:py-[10rem] xl4:py-[11rem] border-b border-white/[0.06]">
+      <section className="section-xl border-b border-white/[0.06]">
         <div className="site-container">
           <div className="relative border border-teal-border bg-ink-800/40 overflow-hidden">
             <div

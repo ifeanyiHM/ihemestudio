@@ -36,7 +36,7 @@ export function Button({
   const sizes = {
     sm: "text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] px-3 py-1.5 xxxl:px-4 xxxl:py-2.5 xl3:px-4.5 xl3:py-3 xl4:px-5 xl4:py-3.5",
     md: "text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] px-5 py-2.5 xxxl:px-6 xxxl:py-3.5 xl3:px-7 xl3:py-4 xl4:px-8 xl4:py-4.5",
-    lg: "text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] px-7 py-3.5 xxxl:px-8 xxxl:py-4.5 xl3:px-9 xl3:py-5 xl4:px-10 xl4:py-5.5",
+    lg: "text-sm xxxl:text-[16px] xl3:text-[16.5px] xl4:text-[19px] px-7 py-3.5 xxxl:px-8 xxxl:py-[18px] xl3:px-9 xl3:py-5 xl4:px-10 xl4:py-6",
   };
   const classes = cn(base, variants[variant], sizes[size], className);
   if (href) {
@@ -75,7 +75,7 @@ export function Tag({
   return (
     <span
       className={cn(
-        "inline-flex items-center px-2.5 py-1 xxxl:px-3.5 xxxl:py-1.5 xl3:px-4 xl3:py-2 xl4:px-4.5 xl4:py-2.5 rounded-md text-2xs xxxl:text-[0.7rem] xl3:text-[0.75rem] xl4:text-[0.8rem] font-mono font-medium bg-white/[0.05] border border-white/[0.08] text-slate-light",
+        "inline-flex items-center px-2.5 py-1 xxxl:px-3.5 xxxl:py-1.5 xl3:px-4 xl3:py-2 xl4:px-4.5 xl4:py-2.5 rounded-md text-2xs xxxl:text-[0.7rem] xl3:text-[0.8rem] xl4:text-[0.95rem] font-mono font-medium bg-white/[0.05] border border-white/[0.08] text-slate-light",
         className,
       )}
     >

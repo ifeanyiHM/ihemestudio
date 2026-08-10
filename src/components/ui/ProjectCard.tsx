@@ -146,7 +146,7 @@ export function ProjectCard({
 
       {/* Content side */}
       <div
-        className={`relative flex flex-col justify-center p-8 lg:p-12 ${reverse ? "lg:order-1" : "lg:order-2"}`}
+        className={`relative flex flex-col justify-center p-8 lg:p-12 xl3:px-14 xl4:px-16 ${reverse ? "lg:order-1" : "lg:order-2"}`}
       >
         <div
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -168,21 +168,21 @@ export function ProjectCard({
           </div>
 
           <div>
-            <h3 className="font-display text-2xl lg:text-3xl xxxl:text-[2rem] xl3:text-[2.15rem] xl4:text-[2.3rem] text-white font-bold mb-2 group-hover:text-teal/90 transition-colors">
+            <h3 className="font-display text-2xl lg:text-3xl xxxl:text-[2rem] xl3:text-[2.35rem] xl4:text-[2.75rem] text-white font-bold mb-2 xl3:mb-4 xl4:mb-6 group-hover:text-teal/90 transition-colors">
               {project.title}
             </h3>
-            <p className="text-teal/70 text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] font-medium mb-3">
+            <p className="text-teal/70 text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[20px] font-medium mb-3 xl4:mb-5">
               {project.tagline}
             </p>
-            <p className="text-slate text-sm xxxl:text-[16px] xl3:text-[16.5px] xl4:text-[17px] leading-relaxed">
+            <p className="text-slate text-sm xxxl:text-[16px] xl3:text-[17.5px] xl4:text-[20px] leading-relaxed">
               {project.description}
             </p>
           </div>
 
           {project.impact && (
             <div className="flex items-start gap-2">
-              <span className="w-1 h-1 bg-teal flex-shrink-0 mt-1.5" />
-              <p className="text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] text-slate-muted">
+              <span className="w-1 h-1 bg-teal flex-shrink-0 mt-1.5 xl4:mt-3.5" />
+              <p className="text-xs xxxl:text-[15px] xl3:text-[16.5px] xl4:text-[17px] text-slate-muted">
                 {project.impact}
               </p>
             </div>
@@ -194,16 +194,16 @@ export function ProjectCard({
             ))}
           </div>
 
-          <div className="flex items-center gap-3 pt-3">
+          <div className="flex items-center gap-3 xl4:gap-4 pt-3">
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm xxxl:text-[17px] text-white font-medium px-4 py-2 xxxl:px-5 xxxl:py-3 bg-teal/10 border border-teal-border hover:bg-teal hover:text-ink transition-all duration-200"
+                className="flex items-center gap-1.5 text-sm xxxl:text-[17px] xl4:text-[20px] text-white font-medium px-4 py-2 xxxl:px-5 xxxl:py-3 xl4:px-6 xl4:py-4 bg-teal/10 border border-teal-border hover:bg-teal hover:text-ink transition-all duration-200"
               >
                 Live Site{" "}
-                <FiArrowUpRight className="text-[13px] xxxl:text-base" />
+                <FiArrowUpRight className="text-[13px] xxxl:text-base xl4:text-md" />
               </a>
             )}
             {project.codeUrl && (
@@ -211,9 +211,10 @@ export function ProjectCard({
                 href={project.codeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm xxxl:text-[17px] text-slate hover:text-white px-4 py-2 xxxl:px-5 xxxl:py-3 bg-white/[0.04] border border-white/[0.08] hover:border-white/20 transition-all duration-200"
+                className="flex items-center gap-1.5 text-sm xxxl:text-[17px] xl4:text-[20px] text-slate hover:text-white px-4 py-2 xxxl:px-5 xxxl:py-3 xl4:px-6 xl4:py-4 bg-white/[0.04] border border-white/[0.08] hover:border-white/20 transition-all duration-200"
               >
-                <FiGithub className="text-[13px] xxxl:text-base" /> Code
+                <FiGithub className="text-[13px] xxxl:text-base xl4:text-md" />{" "}
+                Code
               </a>
             )}
           </div>

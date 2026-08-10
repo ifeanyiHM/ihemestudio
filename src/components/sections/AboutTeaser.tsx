@@ -31,13 +31,13 @@ export function AboutTeaser() {
             <div className="space-y-7 xxxl:space-y-8 xl3:space-y-9 xl4:space-y-10 lg:sticky lg:top-32">
               <SectionLabel>About the Studio</SectionLabel>
 
-              <h2 className="font-display text-display-lg xxxl:text-display-x xl3:text-[3.8rem] xl4:text-[4rem] text-white font-bold leading-tight">
+              <h2 className="section-heading-lg text-white font-bold leading-tight">
                 Passionate about craft.
                 <br />
                 <span className="text-gradient">Obsessed with quality.</span>
               </h2>
 
-              <p className="text-slate xxxl:text-[18px] xl3:text-[18.5px] xl4:text-[19px] leading-relaxed max-w-lg">
+              <p className="text-body max-w-lg xl3:max-w-[39rem] xl4:max-w-[44rem]">
                 We are a dedicated software engineering studio that puts
                 craftsmanship at the center of everything we build. Our
                 commitment to personal growth and high standards has helped us
@@ -46,7 +46,7 @@ export function AboutTeaser() {
               </p>
 
               <blockquote className="relative pl-5 border-l border-teal/40">
-                <p className="font-display text-lg xxxl:text-xl xl3:text-[1.15rem] xl4:text-[1.2rem] text-white/90 italic leading-snug">
+                <p className="font-display text-lg xxxl:text-xl xl3:text-[1.35rem] xl4:text-[1.6rem] text-white/90 italic leading-snug">
                   &ldquo;Let the beauty of what you love be what you do.&rdquo;
                 </p>
                 <cite className="block not-italic text-slate-muted text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] font-mono uppercase tracking-[0.1em] mt-2">
@@ -70,18 +70,18 @@ export function AboutTeaser() {
             {VALUES.map((value, i) => (
               <FadeIn key={value.title} delay={i * 70} direction="up">
                 <div
-                  className={`group grid grid-cols-[64px_1fr] gap-5 xxxl:gap-6 py-7 xxxl:py-8 ${
+                  className={`group grid grid-cols-[64px_1fr] gap-5 xxxl:gap-6 xl3:gap-8 xl4:gap-10 py-7 xxxl:py-8 xl4:py-9 ${
                     i !== 0 ? "border-t border-white/[0.06]" : ""
                   }`}
                 >
-                  <span className="font-display text-3xl xxxl:text-4xl font-bold text-white/[0.08] group-hover:text-teal/25 transition-colors duration-300 select-none leading-none">
+                  <span className="font-display text-3xl xxxl:text-4xl xl4:text-5xl font-bold text-white/[0.08] group-hover:text-teal/25 transition-colors duration-300 select-none leading-none">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <h3 className="font-display font-semibold text-white text-base xxxl:text-lg mb-2 xxxl:mb-3 group-hover:text-teal/90 transition-colors duration-300">
+                    <h3 className="font-display font-semibold text-white text-base xxxl:text-lg xl3:text-xl xl4:text-2xl mb-2 xxxl:mb-3 group-hover:text-teal/90 transition-colors duration-300">
                       {value.title}
                     </h3>
-                    <p className="text-slate-muted text-sm xxxl:text-[17px] leading-relaxed max-w-sm xxxl:max-w-md group-hover:text-slate transition-colors duration-300">
+                    <p className="text-slate-muted text-sm xxxl:text-[17px] xl3:text-[18px] xl4:text-[20.5px] leading-relaxed max-w-sm xxxl:max-w-md xl3:max-w-lg xl4:max-w-xl group-hover:text-slate transition-colors duration-300">
                       {value.body}
                     </p>
                   </div>

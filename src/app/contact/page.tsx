@@ -112,10 +112,8 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <p className="text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono text-teal uppercase tracking-widest mb-4">
-                  Find us online
-                </p>
-                <div className="flex items-center gap-3 xxxl:gap-4 xl3:gap-5 xl4:gap-6">
+                <p className="text-meta mb-4">Find us online</p>
+                <div className="row-inline-sm">
                   {SOCIALS.map(({ icon: Icon, href, label }) => (
                     <a
                       key={label}

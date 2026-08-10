@@ -29,7 +29,7 @@ export default function ProjectsPage() {
           }}
         />
         <div className="relative site-container">
-          <div className="max-w-3xl xxxl:max-w-4xl xl3:max-w-[60rem] xl4:max-w-[65rem] space-y-6 xxxl:space-y-8 xl3:space-y-9 xl4:space-y-10">
+          <div className="content-panel-lg space-y-6 xxxl:space-y-8 xl3:space-y-9 xl4:space-y-10">
             <SectionLabel>Our Work</SectionLabel>
             <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.25rem] xl4:text-[4.5rem] text-white font-bold leading-[1.05]">
               Products <span className="text-gradient">we&apos;ve shipped</span>

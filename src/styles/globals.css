@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import "./design-system.css"; */
+
 /* ─── Base reset & root ──────────────────────────────────────────────────── */
 *,
 *::before,
@@ -56,6 +58,38 @@ body::before {
 @layer components {
   .site-container {
     @apply max-w-7xl xxl:max-w-[95%] xl3:max-w-[94%] xl4:max-w-[93%] mx-auto px-6;
+  }
+
+  .section-xl {
+    @apply py-section xxxl:py-36 xl3:py-[10rem] xl4:py-[11rem];
+  }
+
+  .section-heading-lg {
+    @apply font-display text-display-lg xxxl:text-display-x xl3:text-[3.5rem] xl4:text-[3.8rem];
+  }
+
+  .text-body {
+    @apply text-slate text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[20px] leading-relaxed;
+  }
+
+  .row-inline-sm {
+    @apply flex items-center gap-3 xxxl:gap-4 xl3:gap-5 xl4:gap-6;
+  }
+
+  .text-meta-base {
+    @apply text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono uppercase tracking-widest;
+  }
+
+  .text-meta {
+    @apply text-meta-base text-teal;
+  }
+
+  .icon-box-sm {
+    @apply w-8 h-8 xxxl:w-9 xxxl:h-9 xl3:w-10 xl3:h-10 xl4:w-11 xl4:h-11 rounded-lg bg-teal-subtle border border-teal-border flex items-center justify-center;
+  }
+
+  .content-panel-lg {
+    @apply max-w-3xl xxxl:max-w-4xl xl3:max-w-[60rem] xl4:max-w-[65rem];
   }
 }
 
