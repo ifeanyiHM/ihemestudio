@@ -49,22 +49,22 @@ export function ProjectCard({
 }) {
   if (compact) {
     return (
-      <div className="group flex flex-col sm:flex-row sm:items-center gap-4 p-6 xxxl:p-8 xl3:p-9 xl4:p-10 hover:bg-white/[0.02] transition-colors duration-200">
+      <div className="group flex flex-col sm:flex-row sm:items-center gap-4 xl4:gap-6 p-6 xxxl:p-8 xl3:p-9 xl4:p-10 hover:bg-white/[0.02] transition-colors duration-200">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-3 mb-1 xxxl:mb-2 xl3:mb-3 xl4:mb-4">
-            <span className="text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] font-mono text-slate-muted">
+            <span className="text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[17px] font-mono text-slate-muted">
               {project.year}
             </span>
             <span
-              className={`text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono px-2 py-0.5 border ${CATEGORY_COLORS[project.category]}`}
+              className={`text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono px-2 py-0.5 xl4:px-3 xl4:py-1.5 border ${CATEGORY_COLORS[project.category]}`}
             >
               {CATEGORY_LABELS[project.category]}
             </span>
           </div>
-          <h3 className="font-display font-semibold text-white text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] group-hover:text-teal/90 transition-colors">
+          <h3 className="font-display font-semibold text-white text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[19px] group-hover:text-teal/90 transition-colors">
             {project.title}
           </h3>
-          <p className="text-slate text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] mt-0.5 xxxl:mt-1 xl3:mt-1.5 xl4:mt-2 truncate">
+          <p className="text-slate text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[17px] mt-0.5 xxxl:mt-1 xl3:mt-1.5 xl4:mt-2 truncate">
             {project.tagline}
           </p>
         </div>
@@ -72,13 +72,13 @@ export function ProjectCard({
           {project.tags.map((tag) => (
             <Tag
               key={tag}
-              className="text-2xs xxxl:text-[0.7rem] xl3:text-[0.75rem] xl4:text-[0.8rem]"
+              className="text-2xs xxxl:text-[0.7rem] xl3:text-[0.8rem] xl4:text-[0.9rem]"
             >
               {tag}
             </Tag>
           ))}
         </div>
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-2 xl4:gap-4 flex-shrink-0">
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -87,7 +87,7 @@ export function ProjectCard({
               aria-label={`${project.title} live site`}
               className="p-2 text-slate hover:text-teal hover:bg-teal-subtle transition-all duration-200"
             >
-              <FiArrowUpRight className="text-[15px] xxxl:text-lg" />
+              <FiArrowUpRight className="text-[15px] xxxl:text-lg xl4:text-2xl" />
             </a>
           )}
           {project.codeUrl && (
@@ -98,7 +98,7 @@ export function ProjectCard({
               aria-label={`${project.title} source code`}
               className="p-2 text-slate hover:text-white hover:bg-white/[0.05] transition-all duration-200"
             >
-              <FiGithub className="text-[15px] xxxl:text-lg" />
+              <FiGithub className="text-[15px] xxxl:text-lg xl4:text-2xl" />
             </a>
           )}
         </div>

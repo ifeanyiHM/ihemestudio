@@ -69,11 +69,11 @@ export default function ContactPage() {
             <div className="space-y-10 xxxl:space-y-12 xl3:space-y-14 xl4:space-y-16">
               <div className="space-y-5 xxxl:space-y-7 xl3:space-y-8 xl4:space-y-9">
                 <SectionLabel>Get in Touch</SectionLabel>
-                <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.25rem] xl4:text-[4.5rem] text-white font-bold leading-[1.05]">
+                <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.4rem] xl4:text-[5rem] text-white font-bold leading-[1.05]">
                   Let&apos;s build{" "}
                   <span className="text-gradient">something great</span>
                 </h1>
-                <p className="text-slate text-lg xxxl:text-xl xl3:text-[1.125rem] xl4:text-[1.2rem] font-light leading-relaxed xxxl:leading-loose xl3:leading-[1.9] xl4:leading-[2] max-w-md xxxl:max-w-lg">
+                <p className="text-slate text-lg xxxl:text-xl xl3:text-[1.4rem] xl4:text-[1.6rem] font-light leading-relaxed xxxl:leading-8 xl3:leading-[2.3rem] xl4:leading-[2.7rem] max-w-xl xxxl:max-w-2xl xl3:max-w-3xl xl4:max-w-4xl">
                   Whether you have a fully scoped product or a rough idea worth
                   exploring, we want to hear about it.
                 </p>
@@ -84,8 +84,8 @@ export default function ContactPage() {
                   const Icon = detail.icon;
                   const content = (
                     <div className="flex items-center gap-4 p-5 xxxl:p-7 xl3:gap-5 xl4:gap-6 xl3:p-8 xl4:p-9 group">
-                      <div className="w-10 h-10 bg-teal-subtle border border-teal-border flex items-center justify-center flex-shrink-0">
-                        <Icon className="text-[16px] xxxl:text-lg xl3:text-[17px] xl4:text-[18px] text-teal" />
+                      <div className="w-10 h-10 xl3:w-12 xl3:h-12 xl4:w-14 xl4:h-14 bg-teal-subtle border border-teal-border flex items-center justify-center flex-shrink-0">
+                        <Icon className="text-[16px] xxxl:text-lg xl3:text-[17px] xl4:text-[20px] text-teal" />
                       </div>
                       <div>
                         <p className="text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono text-slate-muted uppercase tracking-widest mb-0.5">
@@ -121,7 +121,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="w-11 h-11 bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate hover:text-teal hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
+                      className="w-11 h-11 xl3:w-14 xl3:h-14 xl4:w-16 xl4:h-16 bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate hover:text-teal hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
                     >
                       <Icon className="text-[17px] xxxl:text-lg xl3:text-[18px] xl4:text-[19px]" />
                     </a>

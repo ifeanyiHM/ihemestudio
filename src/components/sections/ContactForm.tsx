@@ -62,7 +62,7 @@ function CustomSelect({
         type="button"
         onClick={() => setOpen((p) => !p)}
         className={cn(
-          "w-full flex items-center justify-between px-4 py-3 xxxl:px-5 xxxl:py-4 xl3:px-6 xl3:py-4 xl4:px-7 xl4:py-4 text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] border transition-all duration-200 focus:outline-none",
+          "w-full flex items-center justify-between px-4 py-3 xxxl:px-5 xxxl:py-4 xl3:px-6 xl3:py-4 xl4:px-7 xl4:py-5 text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[20px] border transition-all duration-200 focus:outline-none",
           open
             ? "border-teal/50 bg-teal-subtle text-white"
             : "border-white/[0.1] bg-white/[0.04] text-slate-muted hover:border-white/[0.2] hover:text-white",
@@ -90,7 +90,7 @@ function CustomSelect({
                 setOpen(false);
               }}
               className={cn(
-                "w-full text-left px-4 py-3 xxxl:px-5 xxxl:py-4 text-sm xxxl:text-[17px] transition-colors duration-150",
+                "w-full text-left px-4 py-3 xxxl:px-5 xxxl:py-4 xl4:py-5 text-sm xxxl:text-[17px] xl4:text-[20px] transition-colors duration-150",
                 value === option.value
                   ? "text-teal bg-teal-subtle"
                   : "text-slate hover:text-white hover:bg-white/[0.05]",
@@ -173,13 +173,13 @@ export function ContactForm() {
   }
 
   const inputClass =
-    "w-full bg-white/[0.04] border border-white/[0.1] px-4 py-3 xxxl:px-5 xxxl:py-4 xl3:px-6 xl3:py-4 xl4:px-7 xl4:py-5 text-white text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] placeholder:text-slate-muted focus:outline-none focus:border-teal/50 focus:bg-teal-subtle transition-all duration-200";
+    "w-full bg-white/[0.04] border border-white/[0.1] px-4 py-3 xxxl:px-5 xxxl:py-4 xl3:px-6 xl3:py-4 xl4:px-7 xl4:py-5 text-white text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[20px] placeholder:text-slate-muted focus:outline-none focus:border-teal/50 focus:bg-teal-subtle transition-all duration-200";
 
   const labelClass =
-    "block text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono uppercase tracking-widest text-slate-muted mb-2 xxxl:mb-3 xl3:mb-4 xl4:mb-5";
+    "block text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.9rem] font-mono uppercase tracking-widest text-slate-muted mb-2 xxxl:mb-3 xl3:mb-4";
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6 xl4:space-y-8">
       {status === "error" && (
         <div className="flex items-center gap-3 xxxl:gap-4 xl3:gap-5 xl4:gap-6 px-4 py-3 xxxl:px-5 xxxl:py-4 xl3:px-6 xl3:py-5 xl4:px-7 xl4:py-5 border border-red-500/30 bg-red-500/10 text-red-400 text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px]">
           <FiAlertCircle className="flex-shrink-0 text-[15px] xxxl:text-[18px] xl3:text-[19px] xl4:text-[20px]" />

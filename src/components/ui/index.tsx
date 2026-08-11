@@ -75,7 +75,7 @@ export function Tag({
   return (
     <span
       className={cn(
-        "inline-flex items-center px-2.5 py-1 xxxl:px-3.5 xxxl:py-1.5 xl3:px-4 xl3:py-2 xl4:px-4.5 xl4:py-2.5 rounded-md text-2xs xxxl:text-[0.7rem] xl3:text-[0.8rem] xl4:text-[0.95rem] font-mono font-medium bg-white/[0.05] border border-white/[0.08] text-slate-light",
+        "inline-flex items-center px-2.5 py-1 xxxl:px-3 xxxl:py-1.5 xl3:px-3.5 xl3:py-2 xl4:px-4 xl4:py-2.5 rounded-md text-2xs xxxl:text-[0.7rem] xl3:text-[0.8rem] xl4:text-[0.9rem] font-mono font-medium bg-white/[0.05] border border-white/[0.08] text-slate-light",
         className,
       )}
     >
@@ -95,11 +95,11 @@ export function SectionLabel({
   return (
     <p
       className={cn(
-        "text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono text-teal uppercase tracking-[0.2em] flex items-center gap-2",
+        "text-2xs xxxl:text-[0.7rem] xl3:text-[0.78rem] xl4:text-[0.9rem] font-mono text-teal uppercase tracking-[0.2em] flex items-center gap-2",
         className,
       )}
     >
-      <span className="w-5 h-px bg-teal inline-block" />
+      <span className="w-5 h-px xl3:w-7 xl3:h-[2px] bg-teal inline-block" />
       {children}
     </p>
   );

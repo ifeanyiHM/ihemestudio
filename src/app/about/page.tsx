@@ -65,11 +65,11 @@ export default function AboutPage() {
             <FadeIn direction="up">
               <div className="space-y-7 xxxl:space-y-9 xl3:space-y-10 xl4:space-y-12">
                 <SectionLabel>About the Studio</SectionLabel>
-                <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.25rem] xl4:text-[4.5rem] text-white font-bold leading-[1.05]">
+                <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.25rem] xl4:text-[4.7rem] text-white font-bold leading-[1.05]">
                   We engineer products{" "}
                   <em className="text-gradient not-italic">with purpose.</em>
                 </h1>
-                <div className="flex items-center gap-2 text-slate-muted text-sm xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px]">
+                <div className="flex items-center gap-2 text-slate-muted text-sm xxxl:text-[15px] xl3:text-[17.5px] xl4:text-[20px]">
                   <FiMapPin className="text-[14px] xxxl:text-base xl3:text-[15px] xl4:text-[16px] text-teal/70" />
                   <span>Lagos, Nigeria · Working with clients worldwide</span>
                 </div>
@@ -81,7 +81,7 @@ export default function AboutPage() {
                       target={href.startsWith("mailto") ? undefined : "_blank"}
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="w-10 h-10 xxxl:w-11 xxxl:h-11 bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate hover:text-teal hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
+                      className="w-10 h-10 xxxl:w-11 xxxl:h-11 xl3:w-12 xl3:h-12 xl4:w-14 xl4:h-14 bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate hover:text-teal hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
                     >
                       <Icon className="text-base xxxl:text-lg" />
                     </a>
@@ -91,7 +91,7 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn direction="up" delay={100}>
-              <div className="space-y-5 xxxl:space-y-7 xl3:space-y-8 xl4:space-y-9 xxxl:text-[18px] xl3:text-[18.5px] xl4:text-[19px] text-slate leading-relaxed xxxl:leading-8">
+              <div className="space-y-5 xxxl:space-y-7 xl3:space-y-8 xl4:space-y-9 xxxl:text-[18px] xl3:text-[20px] xl4:text-[23px] text-slate leading-relaxed xxxl:leading-8 xl4:leading-9">
                 <p>
                   Iheme Studio is a software engineering organization built on a
                   simple belief: quality craftsmanship and relentless attention
@@ -107,11 +107,11 @@ export default function AboutPage() {
                   technology.
                 </p>
                 <blockquote className="relative pl-5 border-l border-teal/40">
-                  <p className="font-display text-lg xxxl:text-xl xl3:text-[1.125rem] xl4:text-[1.15rem] text-white/90 italic leading-snug">
+                  <p className="font-display text-lg xxxl:text-xl xl3:text-[1.4rem] xl4:text-[1.6rem] text-white/90 italic leading-snug">
                     &ldquo;Let the beauty of what you love be what you
                     do.&rdquo;
                   </p>
-                  <cite className="block not-italic text-slate-muted text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] font-mono uppercase tracking-[0.1em] mt-2">
+                  <cite className="block not-italic text-slate-muted text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[17px] font-mono uppercase tracking-[0.1em] mt-2 xl4:mt-3">
                     — Rumi
                   </cite>
                 </blockquote>
@@ -150,20 +150,20 @@ export default function AboutPage() {
       <section className="py-section border-b border-white/[0.06]">
         <div className="site-container">
           <FadeIn direction="up">
-            <div className="mb-16 space-y-3">
+            <div className="mb-16 xl4:mb-20 space-y-3">
               <SectionLabel>Technical Skills</SectionLabel>
-              <h2 className="font-display text-display-md xxxl:text-display-x text-white font-bold">
+              <h2 className="font-display text-display-md xxxl:text-[2.3rem] xl3:text-[2.5rem] xl4:text-[2.8rem] text-white font-bold">
                 Our technology stack
               </h2>
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl4:gap-24">
             <FadeIn direction="up" delay={80}>
               <div className="space-y-8 xxxl:space-y-10">
                 {SKILL_GROUPS.map((group) => (
                   <div key={group.label}>
-                    <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest mb-3 xxxl:mb-4">
+                    <p className="text-2xs xxxl:text-[0.675rem] xl3:text-[0.75rem] xl4:text-[0.825rem] font-mono text-teal uppercase tracking-widest mb-3 xl3:mb-4 xl4:mb-6">
                       {group.label}
                     </p>
                     <div className="flex flex-wrap gap-2 xxxl:gap-3">
@@ -206,15 +206,15 @@ export default function AboutPage() {
                   "radial-gradient(ellipse 60% 80% at 100% 50%, rgba(0,212,170,0.05) 0%, transparent 70%)",
               }}
             />
-            <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center p-10 md:p-14">
+            <div className="relative grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center p-10 md:p-14 xl3:p-20 xl4:p-24">
               <div className="space-y-2 xxxl:space-y-3">
                 <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest">
                   Resume
                 </p>
-                <h3 className="font-display text-white font-bold text-2xl md:text-3xl xxxl:text-4xl">
+                <h3 className="font-display text-white font-bold text-2xl md:text-3xl xxxl:text-4xl xl4:text-[2.7rem] leading-snug">
                   Want the full picture?
                 </h3>
-                <p className="text-slate text-sm xxxl:text-[17px] leading-relaxed max-w-md xxxl:max-w-lg">
+                <p className="text-slate text-sm xxxl:text-[17px] xl4:text-[21px] leading-relaxed max-w-md xxxl:max-w-lg xl4:max-w-2xl">
                   Download our resume for a complete overview of experience,
                   skills, and past engagements.
                 </p>
