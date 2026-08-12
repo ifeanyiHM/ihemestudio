@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CursorGlow } from "@/components/animations/CursorGlow";
 import { JsonLd, organizationSchema } from "@/components/ui/JsonLd";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
+import IhemeStudioWidget from "@/components/IhemeStudioWidget";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -111,6 +112,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <ScrollToTop />
+        <IhemeStudioWidget />
       </body>
     </html>
   );

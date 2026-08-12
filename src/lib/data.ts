@@ -189,14 +189,7 @@ export const OTHER_PROJECTS: Project[] = [
 export const SKILL_GROUPS: SkillGroup[] = [
   {
     label: "Languages",
-    skills: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "TypeScript",
-      "Node.js",
-      "SCSS / SASS",
-    ],
+    skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "SCSS / SASS"],
   },
   {
     label: "Frameworks & Libraries",
@@ -211,8 +204,20 @@ export const SKILL_GROUPS: SkillGroup[] = [
     ],
   },
   {
-    label: "Tooling & Platforms",
-    skills: ["Supabase", "GitHub", "Git", "Vercel", "MongoDB", "Storybook"],
+    label: "Backend, Data, LLM & Platforms",
+    skills: [
+      "Node.js",
+      "Supabase",
+      "MongoDB",
+      "REST APIs",
+      "GitHub",
+      "Git",
+      "Vercel",
+      "Storybook",
+      "AI Tools",
+      "LLM API",
+      "Prompt Engineering",
+    ],
   },
   {
     label: "Design",
@@ -245,6 +250,19 @@ export const SERVICES: Service[] = [
       "REST API design & integration",
       "Supabase & MongoDB backends",
       "Authentication & authorization",
+    ],
+  },
+  {
+    id: "ai-llm",
+    icon: "HiOutlineSparkles",
+    title: "AI & LLM Integration",
+    description:
+      "We integrate modern large language models into digital products to create intelligent, useful experiences. From AI assistants and conversational interfaces to business-specific automation, we connect LLMs to your existing applications without compromising usability, security, or performance.",
+    deliverables: [
+      "AI assistants & conversational interfaces",
+      "LLM API integration & orchestration",
+      "Custom system prompts & AI behavior",
+      "Multi-provider AI & fallback systems",
     ],
   },
   {
@@ -352,58 +370,3 @@ export const SERVICES: Service[] = [
     ],
   },
 ];
-
-// export const SERVICES: Service[] = [
-//   {
-//     id: "frontend",
-//     icon: "HiOutlineDesktopComputer",
-//     title: "Frontend Engineering",
-//     description:
-//       "We craft pixel-perfect, performance-optimized user interfaces that users love to navigate. Every component is built for accessibility, responsiveness, and long-term maintainability.",
-//     deliverables: [
-//       "React & Next.js applications",
-//       "TypeScript-first codebases",
-//       "Component libraries & design systems",
-//       "Performance audits & optimization",
-//     ],
-//   },
-//   {
-//     id: "fullstack",
-//     icon: "HiOutlineServer",
-//     title: "Full-Stack Development",
-//     description:
-//       "End-to-end product engineering — from database schema to the last pixel of UI. We own the full delivery pipeline so you get coherent, integrated systems rather than stitched-together parts.",
-//     deliverables: [
-//       "Next.js full-stack applications",
-//       "REST API design & integration",
-//       "Supabase & MongoDB backends",
-//       "Authentication & authorization",
-//     ],
-//   },
-//   {
-//     id: "dashboard",
-//     icon: "HiOutlineChartBar",
-//     title: "Dashboards & Data Platforms",
-//     description:
-//       "Complex data, made intelligible. We build analytics interfaces and operational dashboards that surface insights at a glance — giving decision-makers the context they need, instantly.",
-//     deliverables: [
-//       "Real-time data visualization",
-//       "Interactive charts & graphs",
-//       "API-powered analytics dashboards",
-//       "Role-based access & permissions",
-//     ],
-//   },
-//   {
-//     id: "ui-ux",
-//     icon: "HiOutlineSparkles",
-//     title: "UI/UX Design",
-//     description:
-//       "Design is not decoration — it is the product. We apply systematic visual thinking to produce interfaces that communicate trust, guide user behavior, and feel premium at every interaction.",
-//     deliverables: [
-//       "Figma prototypes & wireframes",
-//       "Design system creation",
-//       "User flow mapping",
-//       "Interaction design & micro-animations",
-//     ],
-//   },
-// ];

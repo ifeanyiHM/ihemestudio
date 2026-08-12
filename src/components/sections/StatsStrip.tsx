@@ -17,6 +17,11 @@ const TECH_MARQUEE = [
   "Shadcn UI",
   "Vercel",
   "GitHub",
+  "Gemini API",
+  "Groq API",
+  "OpenRouter",
+  "LLM Integration",
+  "AI Assistants",
 ];
 
 export function StatsStrip() {

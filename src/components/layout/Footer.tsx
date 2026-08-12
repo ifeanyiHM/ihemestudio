@@ -32,7 +32,19 @@ const PREVIOUS_PORTFOLIOS = [
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-white/[0.06] bg-ink-900">
+    <footer className="relative overflow-hidden border-t border-white/[0.06] bg-ink-900">
+      {/* Ambient background monogram — right side, very low opacity */}
+      {/* <div
+        className="absolute inset-0 pointer-events-none select-none overflow-hidden"
+        aria-hidden="true"
+      >
+        <span
+          className="absolute top-1/2 -translate-y-1/2 -right-[2%] xxxl:-right-[1%] font-display font-bold leading-none text-white/[0.025] text-[16rem] xxxl:text-[19rem] xl3:text-[21rem] xl4:text-[23rem] select-none"
+          style={{ letterSpacing: "-0.02em" }}
+        >
+          IS
+        </span>
+      </div> */}
       <div className="site-container py-16 xxxl:py-20 xl3:py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 xxxl:gap-[3.5rem] xl3:gap-[4rem] xl4:gap-[4.5rem] mb-12 xxxl:mb-[3.5rem] xl3:mb-[4rem] xl4:mb-[4.5rem]">
           {/* Brand */}
