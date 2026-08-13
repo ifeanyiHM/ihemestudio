@@ -76,7 +76,7 @@ const config: Config = {
       animation: {
         "fade-up": "fadeUp 0.6s ease-out forwards",
         "fade-in": "fadeIn 0.5s ease-out forwards",
-        marquee: "marquee 30s linear infinite",
+        marquee: "marquee 60s linear infinite",
         "pulse-slow": "pulse 3s ease-in-out infinite",
         float: "float 6s ease-in-out infinite",
         "float-slow": "float-slow 5s ease-in-out infinite",
