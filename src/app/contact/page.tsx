@@ -69,11 +69,11 @@ export default function ContactPage() {
             <div className="space-y-10 xxxl:space-y-12 xl3:space-y-14 xl4:space-y-16">
               <div className="space-y-5 xxxl:space-y-7 xl3:space-y-8 xl4:space-y-9">
                 <SectionLabel>Get in Touch</SectionLabel>
-                <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.4rem] xl4:text-[5rem] text-white font-bold leading-[1.05]">
+                <h1 className="font-display text-display-xl xxl:text-[3.8rem] xxxl:text-display-xxl xl3:text-[4.4rem] xl4:text-[5rem] text-white font-bold leading-[1.05]">
                   Let&apos;s build{" "}
                   <span className="text-gradient">something great</span>
                 </h1>
-                <p className="text-slate text-lg xxxl:text-xl xl3:text-[1.4rem] xl4:text-[1.6rem] font-light leading-relaxed xxxl:leading-8 xl3:leading-[2.3rem] xl4:leading-[2.7rem] max-w-xl xxxl:max-w-2xl xl3:max-w-3xl xl4:max-w-4xl">
+                <p className="text-slate text-lg xxl:text-[19px] xxxl:text-xl xl3:text-[1.4rem] xl4:text-[1.6rem] font-light leading-relaxed xxxl:leading-8 xl3:leading-[2.3rem] xl4:leading-[2.7rem] max-w-xl xxxl:max-w-2xl xl3:max-w-3xl xl4:max-w-4xl">
                   Whether you have a fully scoped product or a rough idea worth
                   exploring, we want to hear about it.
                 </p>
