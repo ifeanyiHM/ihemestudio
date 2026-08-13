@@ -8,9 +8,9 @@ import type {
 } from "@/types";
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
+  { label: "About", href: "/about" },
   // { label: "Resume", href: "/Ifeanyi_Iheme_resume.pdf" },
   { label: "Contact", href: "/contact" },
 ];
