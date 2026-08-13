@@ -84,7 +84,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="font-display text-white mb-6 xl3:mb-8 xl4:mb-10 leading-[1.05] tracking-tight text-[clamp(2.25rem,5vw,3.75rem)] lg:text-[clamp(2rem,5vw,2.9rem)] xl:text-[clamp(2.25rem,5vw,3.75rem)] xxxl:text-[4.2rem] xl3:text-[4.5rem] xl4:text-[5rem] font-bold">
+          <h1 className="font-display text-white mb-6 xl3:mb-8 xl4:mb-10 leading-[1.05] tracking-tight text-[clamp(2.25rem,5vw,3.75rem)] lg:text-[clamp(2rem,5vw,2.9rem)] xl:text-[clamp(2.25rem,5vw,3.75rem)] xxl:text-[4rem] xxxl:text-[4.2rem] xl3:text-[4.5rem] xl4:text-[5rem] font-bold">
             We build software that scales.
             {/* <em className="text-gradient not-italic">scales.</em> */}
           </h1>

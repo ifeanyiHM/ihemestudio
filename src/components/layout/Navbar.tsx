@@ -64,7 +64,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     className={cn(
-                      "text-[13px] xxxl:text-[1rem] xl3:text-[1.05rem] xl4:text-[1.2rem] tracking-[0.04em] pb-[2px] border-b transition-colors duration-200",
+                      "text-[13px] xxl:text-[14px] xxxl:text-[1rem] xl3:text-[1.05rem] xl4:text-[1.2rem] tracking-[0.04em] pb-[2px] border-b transition-colors duration-200",
                       isActive
                         ? "text-white font-medium border-teal"
                         : "text-slate font-normal border-transparent hover:text-white",

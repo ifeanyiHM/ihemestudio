@@ -63,11 +63,11 @@ body::before {
   }
 
   .section-heading-lg {
-    @apply font-display text-display-lg xxxl:text-display-x xl3:text-[3.5rem] xl4:text-[3.8rem];
+    @apply font-display text-display-lg xxl:text-display-x xl3:text-[3.5rem] xl4:text-[3.8rem];
   }
 
   .text-body {
-    @apply text-slate text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[20px] leading-relaxed;
+    @apply text-slate text-sm xxl:text-[15px] xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[20px] leading-relaxed;
   }
 
   .row-inline-sm {

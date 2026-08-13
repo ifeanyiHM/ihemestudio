@@ -15,7 +15,7 @@ export function FeaturedProjects() {
             Products we&apos;ve <span className="text-gradient">shipped</span>
           </h2>
 
-          <p className="text-slate xxxl:text-[18px] xl3:text-[18.5px] xl4:text-[22px] leading-relaxed">
+          <p className="text-slate xxl:text-[18px] xl3:text-[18.5px] xl4:text-[22px] leading-relaxed">
             Portfolio excludes products covered by non-disclosure agreements
             (NDAs).
           </p>

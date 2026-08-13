@@ -63,43 +63,6 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      {/* <section className="relative pt-40 pb-24 xxxl:pt-48 xl3:pt-52 xl4:pt-56 xxxl:pb-32 xl3:pb-36 xl4:pb-40 overflow-hidden border-b border-white/[0.06]">
-        <div
-          className="absolute inset-0 grid-bg opacity-20 pointer-events-none"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-0 pointer-events-none"
-          aria-hidden="true"
-          style={{
-            background:
-              "radial-gradient(ellipse 50% 60% at 15% 0%, rgba(0,212,170,0.06) 0%, transparent 70%)",
-          }}
-        />
-        <div className="relative site-container">
-          <FadeIn direction="up">
-            <div className="max-w-xl xxxl:max-w-2xl xl4:max-w-3xl space-y-6 xxxl:space-y-8 xl3:space-y-9 xl4:space-y-10">
-              <SectionLabel>Our Services</SectionLabel>
-              <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.4rem] xl4:text-[5rem] text-white font-bold leading-[1.05]">
-                Everything you need to{" "}
-                <span className="text-gradient">ship great software</span>
-              </h1>
-              <p className="text-slate text-lg xxxl:text-xl xl3:text-[1.4rem] xl4:text-[1.6rem] font-light leading-relaxed xxxl:leading-8 xl3:leading-[2.3rem] xl4:leading-[2.7rem] max-w-xl xxxl:max-w-2xl xl4:max-w-3xl">
-                End-to-end digital engineering services — from the first line of
-                architecture to the final interaction detail.
-              </p>
-              <div className="flex items-center gap-6 xxxl:gap-7 xl3:gap-8 pt-2 text-2xs xxxl:text-[0.7rem] xl3:text-[0.75rem] xl4:text-[0.9rem] font-mono text-slate-muted uppercase tracking-widest">
-                <span>
-                  {String(SERVICES.length).padStart(2, "0")} Core Services
-                </span>
-                <span className="w-1 h-1 xxxl:w-1.5 xxxl:h-1.5 xl4:w-2 xl4:h-2 bg-teal/50" />
-                <span>4-Step Process</span>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section> */}
-      {/* Hero */}
       <section className="relative pt-40 pb-24 xxxl:pt-48 xl3:pt-52 xl4:pt-56 xxxl:pb-32 xl3:pb-36 xl4:pb-40 overflow-hidden border-b border-white/[0.06]">
         <div
           className="absolute inset-0 grid-bg opacity-20 pointer-events-none"
@@ -186,11 +149,11 @@ export default function ServicesPage() {
           <FadeIn direction="up">
             <div className="max-w-xl xxxl:max-w-2xl xl4:max-w-3xl space-y-6 xxxl:space-y-8 xl3:space-y-9 xl4:space-y-10">
               <SectionLabel>Our Services</SectionLabel>
-              <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.4rem] xl4:text-[5rem] text-white font-bold leading-[1.05]">
+              <h1 className="font-display text-display-xl xxl:text-[3.8rem] xxxl:text-display-xxl xl3:text-[4.4rem] xl4:text-[5rem] text-white font-bold leading-[1.05]">
                 Everything you need to{" "}
                 <span className="text-gradient">ship great software</span>
               </h1>
-              <p className="text-slate text-lg xxxl:text-xl xl3:text-[1.4rem] xl4:text-[1.6rem] font-light leading-relaxed xxxl:leading-8 xl3:leading-[2.3rem] xl4:leading-[2.7rem] max-w-xl xxxl:max-w-2xl xl4:max-w-3xl">
+              <p className="text-slate text-lg xxl:text-[19px] xxxl:text-xl xl3:text-[1.4rem] xl4:text-[1.6rem] font-light leading-relaxed xxxl:leading-8 xl3:leading-[2.3rem] xl4:leading-[2.7rem] max-w-xl xxxl:max-w-2xl xl4:max-w-3xl">
                 End-to-end digital engineering services — from the first line of
                 architecture to the final interaction detail.
               </p>

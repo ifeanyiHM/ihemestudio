@@ -27,13 +27,13 @@ const TECH_MARQUEE = [
 export function StatsStrip() {
   return (
     <section>
-      <div className="py-8 xxxl:py-10 xl3:py-12 xl4:py-14 border-y border-white/[0.06] overflow-hidden">
+      <div className="py-8 xxl:py-10 xl3:py-12 xl4:py-14 border-y border-white/[0.06] overflow-hidden">
         <div className="relative flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
           <div className="flex gap-4 xxxl:gap-5 xl3:gap-6 xl4:gap-7 animate-marquee whitespace-nowrap">
             {[...TECH_MARQUEE, ...TECH_MARQUEE].map((tech, i) => (
               <div
                 key={`${tech}-${i}`}
-                className="flex items-center gap-2.5 px-4 py-2.5 xxxl:px-5 xxxl:py-3 xl3:px-6 xl3:py-3.5 xl4:px-7 xl4:py-4 border border-white/[0.08] bg-white/[0.03] text-slate-light text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] font-mono flex-shrink-0"
+                className="flex items-center gap-2.5 px-4 py-2.5 xxxl:px-5 xxxl:py-3 xl3:px-6 xl3:py-3.5 xl4:px-7 xl4:py-4 border border-white/[0.08] bg-white/[0.03] text-slate-light text-sm xxl:text-[15px] xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] font-mono flex-shrink-0"
               >
                 <span className="w-1.5 h-1.5 bg-teal/60 flex-shrink-0" />
                 {tech}

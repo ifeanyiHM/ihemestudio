@@ -75,7 +75,7 @@ export function Tag({
   return (
     <span
       className={cn(
-        "inline-flex items-center px-2.5 py-1 xxxl:px-3 xxxl:py-1.5 xl3:px-3.5 xl3:py-2 xl4:px-4 xl4:py-2.5 rounded-md text-2xs xxxl:text-[0.7rem] xl3:text-[0.8rem] xl4:text-[0.9rem] font-mono font-medium bg-white/[0.05] border border-white/[0.08] text-slate-light",
+        "inline-flex items-center px-2.5 py-1 xxxl:px-3 xxxl:py-1.5 xl3:px-3.5 xl3:py-2 xl4:px-4 xl4:py-2.5 rounded-md text-2xs xxl:text-[0.7rem] xl3:text-[0.8rem] xl4:text-[0.9rem] font-mono font-medium bg-white/[0.05] border border-white/[0.08] text-slate-light",
         className,
       )}
     >

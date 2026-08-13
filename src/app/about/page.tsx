@@ -19,15 +19,6 @@ export const metadata: Metadata = {
     "Learn about Iheme Studio — a software engineering organization based in Lagos, Nigeria.",
 };
 
-// const SKILLS_PROFICIENCY = [
-//   { label: "HTML5 & CSS3", pct: 90 },
-//   { label: "JavaScript / TypeScript", pct: 85 },
-//   { label: "React / Next.js", pct: 92 },
-//   { label: "Tailwind / SCSS", pct: 88 },
-//   { label: "Node.js / Express.js", pct: 65 },
-//   { label: "Supabase / MongoDB", pct: 85 },
-// ];
-
 const FREQUENTLY_USED = [
   { label: "HTML5 & CSS3", pct: 85, usage: "Frequent" },
   { label: "JavaScript / TypeScript", pct: 95, usage: "Core" },
@@ -119,11 +110,11 @@ export default function AboutPage() {
             <FadeIn direction="up">
               <div className="space-y-7 xxxl:space-y-9 xl3:space-y-10 xl4:space-y-12">
                 <SectionLabel>About the Studio</SectionLabel>
-                <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.25rem] xl4:text-[4.7rem] text-white font-bold leading-[1.05]">
+                <h1 className="font-display text-display-xl xxl:text-[3.8rem] xxxl:text-display-xxl xl3:text-[4.25rem] xl4:text-[4.7rem] text-white font-bold leading-[1.05]">
                   We engineer products{" "}
                   <em className="text-gradient not-italic">with purpose.</em>
                 </h1>
-                <div className="flex items-center gap-2 text-slate-muted text-sm xxxl:text-[15px] xl3:text-[17.5px] xl4:text-[20px]">
+                <div className="flex items-center gap-2 text-slate-muted text-sm xxl:text-[15px] xl3:text-[17.5px] xl4:text-[20px]">
                   <FiMapPin className="text-[14px] xxxl:text-base xl3:text-[15px] xl4:text-[16px] text-teal/70" />
                   <span>Lagos, Nigeria · Working with clients worldwide</span>
                 </div>
@@ -145,7 +136,7 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn direction="up" delay={100}>
-              <div className="space-y-5 xxxl:space-y-7 xl3:space-y-8 xl4:space-y-9 xxxl:text-[18px] xl3:text-[20px] xl4:text-[23px] text-slate leading-relaxed xxxl:leading-8 xl4:leading-9">
+              <div className="space-y-5 xxxl:space-y-7 xl3:space-y-8 xl4:space-y-9 xxl:text-[17px] xxxl:text-[18px] xl3:text-[20px] xl4:text-[23px] text-slate leading-relaxed xxxl:leading-8 xl4:leading-9">
                 <p>
                   Iheme Studio is a software engineering organization built on a
                   simple belief: quality craftsmanship and relentless attention

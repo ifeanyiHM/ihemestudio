@@ -133,10 +133,10 @@ export default function ProjectsPage() {
         <div className="relative site-container">
           <div className="space-y-6 xxxl:space-y-8 xl3:space-y-9 xl4:space-y-10">
             <SectionLabel>Our Work</SectionLabel>
-            <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.4rem] xl4:text-[5rem] text-white font-bold leading-[1.05] max-w-xl xxxl:max-w-2xl xl4:max-w-3xl ">
+            <h1 className="font-display text-display-xl xxl:text-[3.8rem] xxxl:text-display-xxl xl3:text-[4.4rem] xl4:text-[5rem] text-white font-bold leading-[1.05] max-w-xl xxxl:max-w-2xl xl4:max-w-3xl ">
               Products <span className="text-gradient">we&apos;ve shipped</span>
             </h1>
-            <p className="text-slate text-lg xxxl:text-xl xl3:text-[1.4rem] xl4:text-[1.6rem] font-light leading-relaxed xxxl:leading-8 xl3:leading-[2.3rem] xl4:leading-[2.7rem] max-w-xl xxxl:max-w-2xl xl3:max-w-3xl xl4:max-w-4xl">
+            <p className="text-slate text-lg xxl:text-[19px] xxxl:text-xl xl3:text-[1.4rem] xl4:text-[1.6rem] font-light leading-relaxed xxxl:leading-8 xl3:leading-[2.3rem] xl4:leading-[2.7rem] max-w-xl xxl:max-w-[39rem] xxxl:max-w-2xl xl3:max-w-3xl xl4:max-w-4xl">
               A selection of projects we&apos;ve designed, engineered, and
               launched — from enterprise platforms to real estate marketplaces
               and climate analytics tools. Some client projects are not included
