@@ -19,13 +19,22 @@ export const metadata: Metadata = {
     "Learn about Iheme Studio — a software engineering organization based in Lagos, Nigeria.",
 };
 
-const SKILLS_PROFICIENCY = [
-  { label: "HTML5 & CSS3", pct: 90 },
-  { label: "JavaScript / TypeScript", pct: 85 },
-  { label: "React / Next.js", pct: 92 },
-  { label: "Tailwind / SCSS", pct: 88 },
-  { label: "Node.js / Express.js", pct: 65 },
-  { label: "Supabase / MongoDB", pct: 85 },
+// const SKILLS_PROFICIENCY = [
+//   { label: "HTML5 & CSS3", pct: 90 },
+//   { label: "JavaScript / TypeScript", pct: 85 },
+//   { label: "React / Next.js", pct: 92 },
+//   { label: "Tailwind / SCSS", pct: 88 },
+//   { label: "Node.js / Express.js", pct: 65 },
+//   { label: "Supabase / MongoDB", pct: 85 },
+// ];
+
+const FREQUENTLY_USED = [
+  { label: "HTML5 & CSS3", pct: 85, usage: "Frequent" },
+  { label: "JavaScript / TypeScript", pct: 95, usage: "Core" },
+  { label: "React / Next.js", pct: 95, usage: "Core" },
+  { label: "Tailwind / SCSS", pct: 90, usage: "Core" },
+  { label: "Node.js / Express.js", pct: 55, usage: "Go-To" },
+  { label: "Supabase / MongoDB", pct: 70, usage: "Regular" },
 ];
 
 const SOCIAL_LINKS = [
@@ -46,80 +55,6 @@ const SOCIAL_LINKS = [
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      {/* <section className="relative pt-40 pb-24 xxxl:pt-48 xl3:pt-52 xl4:pt-56 xxxl:pb-32 xl3:pb-36 xl4:pb-40 overflow-hidden border-b border-white/[0.06]">
-        <div
-          className="absolute inset-0 grid-bg opacity-20 pointer-events-none"
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-0 pointer-events-none"
-          aria-hidden="true"
-          style={{
-            background:
-              "radial-gradient(ellipse 50% 60% at 15% 0%, rgba(0,212,170,0.06) 0%, transparent 70%)",
-          }}
-        />
-        <div className="relative site-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <FadeIn direction="up">
-              <div className="space-y-7 xxxl:space-y-9 xl3:space-y-10 xl4:space-y-12">
-                <SectionLabel>About the Studio</SectionLabel>
-                <h1 className="font-display text-display-xl xxxl:text-display-xxl xl3:text-[4.25rem] xl4:text-[4.7rem] text-white font-bold leading-[1.05]">
-                  We engineer products{" "}
-                  <em className="text-gradient not-italic">with purpose.</em>
-                </h1>
-                <div className="flex items-center gap-2 text-slate-muted text-sm xxxl:text-[15px] xl3:text-[17.5px] xl4:text-[20px]">
-                  <FiMapPin className="text-[14px] xxxl:text-base xl3:text-[15px] xl4:text-[16px] text-teal/70" />
-                  <span>Lagos, Nigeria · Working with clients worldwide</span>
-                </div>
-                <div className="row-inline-sm">
-                  {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
-                    <a
-                      key={label}
-                      href={href}
-                      target={href.startsWith("mailto") ? undefined : "_blank"}
-                      rel="noopener noreferrer"
-                      aria-label={label}
-                      className="w-10 h-10 xxxl:w-11 xxxl:h-11 xl3:w-12 xl3:h-12 xl4:w-14 xl4:h-14 bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-slate hover:text-teal hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
-                    >
-                      <Icon className="text-base xxxl:text-lg" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn direction="up" delay={100}>
-              <div className="space-y-5 xxxl:space-y-7 xl3:space-y-8 xl4:space-y-9 xxxl:text-[18px] xl3:text-[20px] xl4:text-[23px] text-slate leading-relaxed xxxl:leading-8 xl4:leading-9">
-                <p>
-                  Iheme Studio is a software engineering organization built on a
-                  simple belief: quality craftsmanship and relentless attention
-                  to detail produce digital products that stand the test of
-                  time.
-                </p>
-                <p>
-                  We are dedicated individuals based in Lagos, Nigeria, who put
-                  our hearts into everything we build. Our commitment to
-                  personal growth and high productivity has helped us
-                  successfully complete diverse projects across real estate,
-                  enterprise operations, environmental analytics, and HR
-                  technology.
-                </p>
-                <blockquote className="relative pl-5 border-l border-teal/40">
-                  <p className="font-display text-lg xxxl:text-xl xl3:text-[1.4rem] xl4:text-[1.6rem] text-white/90 italic leading-snug">
-                    &ldquo;Let the beauty of what you love be what you
-                    do.&rdquo;
-                  </p>
-                  <cite className="block not-italic text-slate-muted text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[17px] font-mono uppercase tracking-[0.1em] mt-2 xl4:mt-3">
-                    — Rumi
-                  </cite>
-                </blockquote>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section> */}
       {/* Hero */}
       <section className="relative pt-40 pb-24 xxxl:pt-48 xl3:pt-52 xl4:pt-56 xxxl:pb-32 xl3:pb-36 xl4:pb-40 overflow-hidden border-b border-white/[0.06]">
         <div
@@ -298,13 +233,14 @@ export default function AboutPage() {
             <FadeIn direction="up" delay={140}>
               <div className="space-y-5 xxxl:space-y-7">
                 <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest mb-3 xxxl:mb-4">
-                  Competency
+                  Frequently Used
                 </p>
-                {SKILLS_PROFICIENCY.map((s, i) => (
+                {FREQUENTLY_USED.map((s, i) => (
                   <SkillBar
                     key={s.label}
                     label={s.label}
                     pct={s.pct}
+                    usage={s.usage}
                     delay={i * 80}
                   />
                 ))}

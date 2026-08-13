@@ -5,9 +5,10 @@ interface SkillBarProps {
   label: string;
   pct: number;
   delay?: number;
+  usage?: string;
 }
 
-export function SkillBar({ label, pct, delay = 0 }: SkillBarProps) {
+export function SkillBar({ label, pct, delay = 0, usage }: SkillBarProps) {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.5 });
   return (
     <div ref={ref}>
@@ -16,7 +17,7 @@ export function SkillBar({ label, pct, delay = 0 }: SkillBarProps) {
           {label}
         </span>
         <span className="text-xs xxxl:text-[14px] xl3:text-[15.5px] xl4:text-[16px] font-mono text-teal">
-          {pct}%
+          {usage}
         </span>
       </div>
       <div className="h-[3px] xxxl:h-[4px] xl3:h-[4px] xl4:h-[5px] bg-white/[0.06] rounded-full overflow-hidden">
