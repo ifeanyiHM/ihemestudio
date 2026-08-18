@@ -267,7 +267,7 @@ export default function AboutPage() {
               </div>
               <div className="lg:border-l lg:border-white/[0.08] lg:pl-14">
                 <Button
-                  href="https://ifeanyiiheme.vercel.app/Ifeanyi_Iheme_resume.pdf"
+                  href="https://ihemestudio.vercel.app/Ifeanyi_Iheme_resume.pdf"
                   external
                   variant="primary"
                   size="lg"
