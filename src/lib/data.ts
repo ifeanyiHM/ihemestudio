@@ -59,7 +59,14 @@ export const FEATURED_PROJECTS: Project[] = [
     description:
       "A modern, full-stack website built for the Children Rights Advocate (CRA) Foundation to increase awareness, donations, and child sponsorship. The platform enables visitors to sponsor children, make secure donations, explore the foundation's impact, and learn about its mission through an accessible, responsive interface. ",
     category: "fullstack",
-    tags: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Paystack"],
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "Paystack",
+      "Framer Motion",
+    ],
     liveUrl: "https://crafoundation.com.ng/",
     codeUrl: "https://github.com/ifeanyiHM/cra-foundation",
     featured: true,
@@ -77,6 +84,7 @@ export const FEATURED_PROJECTS: Project[] = [
     tags: [
       "Next.js",
       "TypeScript",
+      "Framer Motion",
       "Storybook",
       "Shadcn UI",
       "Tailwind CSS",
