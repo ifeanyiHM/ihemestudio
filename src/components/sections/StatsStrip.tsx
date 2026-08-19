@@ -21,6 +21,8 @@ const TECH_MARQUEE = [
   "CI/CD",
   "Rest API",
   "GraphQL",
+  "OpenAI API",
+  "Anthropic API",
   "Gemini API",
   "Groq API",
   "OpenRouter",

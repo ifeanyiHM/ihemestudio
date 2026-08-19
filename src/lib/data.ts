@@ -224,6 +224,8 @@ export const SKILL_GROUPS: SkillGroup[] = [
       "Storybook",
       "AI Tools",
       "LLM API",
+      "OpenAI API",
+      "Anthropic API",
       "Prompt Engineering",
     ],
   },
