@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       "We build high-performance web applications, enterprise dashboards, and digital products.",
     images: [
       {
-        url: "/iheme-studio-og.jpg",
+        url: "/iheme-studio-og.png",
         width: 1200,
         height: 630,
         alt: "Iheme Studio",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     description:
       "We build high-performance web applications, enterprise dashboards, and digital products.",
     creator: "@ifeanyimichaell",
-    images: ["/iheme-studio-og.jpg"],
+    images: ["/iheme-studio-og.png"],
   },
   robots: {
     index: true,
