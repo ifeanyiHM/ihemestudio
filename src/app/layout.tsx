@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     // images: ["https://www.ihemestudio.com/opengraph.jpg"],
     images: [
       {
-        url: "https://www.ihemestudio.com/opengraph.jpg",
+        url: "https://www.ihemestudio.com/openg.png",
         width: 1200,
         height: 630,
         alt: "Iheme Studio",
