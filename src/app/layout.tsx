@@ -30,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iheme.studio"),
+  metadataBase: new URL("https://www.ihemestudio.com"),
   title: {
     default: "Iheme Studio — Software Engineering & Digital Products",
     template: "%s | Iheme Studio",
@@ -47,12 +47,12 @@ export const metadata: Metadata = {
     "full-stack development",
     "Lagos Nigeria",
   ],
-  authors: [{ name: "Iheme Studio", url: "https://iheme.studio" }],
+  authors: [{ name: "Iheme Studio", url: "https://www.ihemestudio.com" }],
   creator: "Iheme Studio",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://iheme.studio",
+    url: "https://www.ihemestudio.com",
     siteName: "Iheme Studio",
     title: "Iheme Studio — Software Engineering & Digital Products",
     description:
