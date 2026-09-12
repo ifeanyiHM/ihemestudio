@@ -57,14 +57,7 @@ export const metadata: Metadata = {
     title: "Iheme Studio — Software Engineering & Digital Products",
     description:
       "We build high-performance web applications, enterprise dashboards, and digital products.",
-    images: [
-      {
-        url: "https://www.ihemestudio.com/iheme-studio-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Iheme Studio",
-      },
-    ],
+    images: ["https://www.ihemestudio.com/iheme-studio-og.png"],
   },
   twitter: {
     card: "summary_large_image",
