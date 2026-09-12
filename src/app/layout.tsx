@@ -1,12 +1,12 @@
-import type { Metadata, Viewport } from "next";
-import { Inter, Syne, JetBrains_Mono } from "next/font/google";
-import "@/styles/globals.css";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { CursorGlow } from "@/components/animations/CursorGlow";
+import IhemeStudioWidget from "@/components/IhemeStudioWidget";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 import { JsonLd, organizationSchema } from "@/components/ui/JsonLd";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
-import IhemeStudioWidget from "@/components/IhemeStudioWidget";
+import "@/styles/globals.css";
+import type { Metadata, Viewport } from "next";
+import { Inter, JetBrains_Mono, Syne } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
       "We build high-performance web applications, enterprise dashboards, and digital products.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/iheme-studio-og.webp",
         width: 1200,
         height: 630,
         alt: "Iheme Studio",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     description:
       "We build high-performance web applications, enterprise dashboards, and digital products.",
     creator: "@ifeanyimichaell",
-    images: ["/opengraph-image"],
+    images: ["/iheme-studio-og.webp"],
   },
   robots: {
     index: true,
