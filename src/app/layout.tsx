@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Iheme Studio — Software Engineering & Digital Products",
     description:
       "We build high-performance web applications, enterprise dashboards, and digital products.",
-    images: ["https://www.ihemestudio.com/iheme-studio-og.png"],
+    images: ["https://www.ihemestudio.com/iheme-studio-og.jpg"],
   },
   twitter: {
     card: "summary_large_image",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     description:
       "We build high-performance web applications, enterprise dashboards, and digital products.",
     creator: "@ifeanyimichaell",
-    images: ["https://www.ihemestudio.com/iheme-studio-og.png"],
+    images: ["https://www.ihemestudio.com/iheme-studio-og.jpg"],
   },
   robots: {
     index: true,
