@@ -1,4 +1,5 @@
 "use client";
+<<<<<<< HEAD
 import { NAV_ITEMS } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -6,6 +7,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+=======
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FiMenu, FiX } from "react-icons/fi";
+import { NAV_ITEMS } from "@/lib/data";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+>>>>>>> origin/main
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
