@@ -38,6 +38,8 @@ export const metadata: Metadata = {
   description:
     "We build high-performance web applications, enterprise dashboards, and digital products. A software engineering studio based in Lagos, Nigeria.",
   keywords: [
+    "ifeanyi iheme",
+    "iheme studio",
     "software engineering",
     "web development",
     "Next.js",
