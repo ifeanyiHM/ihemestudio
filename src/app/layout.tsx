@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     "full-stack development",
     "Lagos Nigeria",
   ],
-  authors: [{ name: "Iheme Studio", url: "https://www.ihemestudio.com" }],
-  creator: "Iheme Studio",
+  authors: [{ name: "Ifeanyi Iheme", url: "https://www.ihemestudio.com" }],
+  creator: "Ifeanyi Iheme",
   openGraph: {
     type: "website",
     locale: "en_US",
