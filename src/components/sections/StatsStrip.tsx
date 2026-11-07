@@ -1,4 +1,4 @@
-import { FadeIn } from "@/components/animations/FadeIn";
+import { FadeIn } from "@/components/animationss/FadeIn";
 import { STATS } from "@/lib/data";
 
 const TECH_MARQUEE = [

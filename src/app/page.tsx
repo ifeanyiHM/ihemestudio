@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import { Hero } from "@/components/sections/Hero";
-import { StatsStrip } from "@/components/sections/StatsStrip";
-import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
-import { ServicesOverview } from "@/components/sections/ServicesOverview";
+import { CTASection } from "@/components/sections";
 import { AboutTeaser } from "@/components/sections/AboutTeaser";
-import { CTASection } from "@/components/sections/CTASection";
+import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
+import { Hero } from "@/components/sections/Hero";
+import { ServicesOverview } from "@/components/sections/ServicesOverview";
+import { StatsStrip } from "@/components/sections/StatsStrip";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Iheme Studio — Software Engineering & Digital Products",

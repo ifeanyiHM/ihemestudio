@@ -1,15 +1,18 @@
 "use client";
+// import { ScrollProgress } from "@/components/animations/ScrollProgress";
 import { NAV_ITEMS } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { LayoutGroup, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiArrowUpRight, FiMenu, FiX } from "react-icons/fi";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [hovered, setHovered] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -55,35 +58,67 @@ export function Navbar() {
             />
           </Link>
 
-          {/* Desktop links */}
-          <ul className="hidden lg:flex items-center gap-9">
-            {NAV_ITEMS.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className={cn(
-                      "text-[13px] xxl:text-[14px] xxxl:text-[1rem] xl3:text-[1.05rem] xl4:text-[1.2rem] tracking-[0.04em] pb-[2px] border-b transition-colors duration-200",
-                      isActive
-                        ? "text-white font-medium border-teal"
-                        : "text-slate font-normal border-transparent hover:text-white",
+          {/* Desktop links — a single pill glides between items */}
+          <LayoutGroup id="primary-nav">
+            <ul
+              className="hidden lg:flex items-center gap-1 p-1 rounded-full border border-white/[0.07] bg-white/[0.02] backdrop-blur-md"
+              onMouseLeave={() => setHovered(null)}
+            >
+              {NAV_ITEMS.map((item) => {
+                const isActive = pathname === item.href;
+                const pillOn = hovered ? hovered === item.href : isActive;
+                return (
+                  <li key={item.href} className="relative">
+                    {pillOn && (
+                      <motion.span
+                        layoutId="nav-pill"
+                        aria-hidden="true"
+                        className="absolute inset-0 rounded-full bg-white/[0.08] border border-white/[0.08]"
+                        transition={{
+                          type: "spring",
+                          stiffness: 380,
+                          damping: 32,
+                        }}
+                      />
                     )}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+                    <Link
+                      href={item.href}
+                      aria-current={isActive ? "page" : undefined}
+                      onMouseEnter={() => setHovered(item.href)}
+                      onFocus={() => setHovered(item.href)}
+                      onBlur={() => setHovered(null)}
+                      className={cn(
+                        "relative z-10 flex items-center gap-2 rounded-full px-4 xxxl:px-5 xl3:px-6 xl4:px-7 py-1.5 xxxl:py-2 xl4:py-2.5 text-[13px] xxl:text-[14px] xxxl:text-[1rem] xl3:text-[1.05rem] xl4:text-[1.2rem] tracking-[0.03em] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal",
+                        isActive || hovered === item.href
+                          ? "text-white"
+                          : "text-slate",
+                      )}
+                    >
+                      {isActive && (
+                        <span
+                          className="w-1 h-1 rounded-full bg-teal shadow-teal-sm"
+                          aria-hidden="true"
+                        />
+                      )}
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </LayoutGroup>
 
           {/* CTA + mobile toggle */}
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden lg:inline-block text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[18px] font-medium tracking-[0.08em] uppercase border border-teal text-teal px-5 py-[9px] xxxl:px-6 xxxl:py-3 xl3:px-7 xl3:py-3.5 xl4:px-8 xl4:py-4 transition-all duration-200 hover:bg-teal hover:text-ink"
+              className="group/cta hidden lg:inline-block text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[18px] font-medium tracking-[0.08em] uppercase border border-teal text-teal px-5 py-[9px] xxxl:px-6 xxxl:py-3 xl3:px-7 xl3:py-3.5 xl4:px-8 xl4:py-4 transition-all duration-200 hover:bg-teal hover:text-ink"
             >
               Start a Project
+              <FiArrowUpRight
+                className="ml-2 inline -mt-0.5 transition-transform duration-200 group-hover/cta:translate-x-0.5 group-hover/cta:-translate-y-0.5"
+                aria-hidden="true"
+              />
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -95,6 +130,7 @@ export function Navbar() {
             </button>
           </div>
         </nav>
+        {/* <ScrollProgress /> */}
       </header>
 
       {/* Mobile menu */}

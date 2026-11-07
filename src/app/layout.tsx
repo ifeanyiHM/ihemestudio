@@ -1,4 +1,4 @@
-import { CursorGlow } from "@/components/animations/CursorGlow";
+import { CursorGlow } from "@/components/animationss/CursorGlow";
 import IhemeStudioWidget from "@/components/IhemeStudioWidget";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";

@@ -1,13 +1,15 @@
+import { FEATURED_PROJECTS, NAV_ITEMS } from "@/lib/data";
+import Image from "next/image";
 import Link from "next/link";
 import {
+  FiArrowUpRight,
   FiGithub,
   FiLinkedin,
-  FiTwitter,
   FiMail,
-  FiArrowUpRight,
+  FiTwitter,
 } from "react-icons/fi";
-import { NAV_ITEMS, FEATURED_PROJECTS } from "@/lib/data";
-import Image from "next/image";
+import { FitText } from "./FitText";
+import { LocalTime } from "./LocalTime";
 
 const SOCIAL = [
   { icon: FiGithub, href: "https://github.com/ifeanyiHM", label: "GitHub" },
@@ -155,18 +157,30 @@ export function Footer() {
         </div>
 
         {/* Previous Portfolios row */}
-        <div className="border-t border-white/[0.06] py-8 xl4:py-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 xl3:gap-10 xl4:gap-12 mb-4 xxxl:mb-5 xl3:mb-6 xl4:mb-7">
-          <span className="text-slate-muted text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono uppercase tracking-widest flex-shrink-0">
+        <div className="relative border-t border-white/[0.06] py-6 md:py-8 lg:py-10 xl3:py-14 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 xl3:gap-10 xl4:gap-12 mb-4 xxxl:mb-5 xl3:mb-6 xl4:mb-7">
+          {/* Closing wordmark: background layer filling the row's full height */}
+          <div
+            className="absolute inset-0 overflow-hidden pointer-events-none select-none"
+            aria-hidden="true"
+          >
+            <FitText
+              fill
+              text="IHEME STUDIO"
+              className="font-display font-extrabold uppercase"
+            />
+          </div>
+
+          <span className="relative z-10 text-slate-muted text-2xs xxxl:text-[0.875rem] xl3:text-[0.9rem] xl4:text-[0.95rem] font-mono uppercase tracking-widest flex-shrink-0">
             Previous Portfolios
           </span>
-          <div className="flex flex-wrap items-center gap-3 xl4:gap-5">
+          <div className="relative z-10 flex flex-wrap items-center gap-3 xl4:gap-5">
             {PREVIOUS_PORTFOLIOS.map((p) => (
               <a
                 key={p.href}
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-2 xxxl:gap-3 px-4 py-2 xxxl:px-5 xxxl:py-3 xl4:px-6 xl4:py-4 border border-white/[0.08] bg-white/[0.02] text-slate text-sm xxxl:text-[17px] xl4:text-[19px] hover:text-white hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
+                className="group flex items-center gap-2 xxxl:gap-3 px-4 py-2 xxxl:px-5 xxxl:py-3 xl4:px-6 xl4:py-4 border border-white/[0.08] bg-ink-900/60 backdrop-blur-sm text-slate text-sm xxxl:text-[17px] xl4:text-[19px] hover:text-white hover:border-teal-border hover:bg-teal-subtle transition-all duration-200"
               >
                 {p.label}
                 <FiArrowUpRight
@@ -182,11 +196,24 @@ export function Footer() {
           <p className="text-slate-muted text-xs xxxl:text-[15px] xl4:text-[19px]">
             © {year} Iheme Studio. All rights reserved.
           </p>
-          <p className="text-slate-muted text-xs xxxl:text-[15px] xl4:text-[19px]">
-            Lagos, Nigeria
-          </p>
+          <LocalTime className="text-slate-muted text-xs xxxl:text-[15px] xl4:text-[19px] font-mono" />
         </div>
       </div>
+
+      {/* Closing wordmark — edge to edge, stretched taller */}
+      {/* <div className="absolute inset-x-0 bottom-0">
+        <div
+          className="relative select-none overflow-hidden pointer-events-none"
+          aria-hidden="true"
+        >
+          <FitText
+            text="IHEME STUDIO"
+            stretch={1.7}
+            className="font-display font-extrabold uppercase"
+          />
+
+        </div>
+      </div> */}
     </footer>
   );
 }

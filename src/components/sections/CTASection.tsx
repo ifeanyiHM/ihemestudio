@@ -1,11 +1,12 @@
-import { FiArrowRight, FiMail } from "react-icons/fi";
+import { Magnetic } from "@/components/animations/Magnetic";
 import { Button } from "@/components/ui";
+import { FiArrowRight, FiMail } from "react-icons/fi";
 
 export function CTASection() {
   return (
     <section className="section-xl border-t border-white/[0.06]">
       <div className="site-container">
-        <div className="relative overflow-hidden border border-teal-border bg-ink-800/60">
+        <div className="border-beam relative overflow-hidden border border-teal-border bg-ink-800/60">
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
@@ -39,15 +40,17 @@ export function CTASection() {
 
             {/* Right — actions */}
             <div className="flex flex-col items-center lg:items-start gap-5 xl4:gap-7 lg:border-l lg:border-white/[0.08] lg:pl-16">
-              <Button
-                href="/contact"
-                size="lg"
-                variant="primary"
-                className="w-full lg:w-auto justify-center"
-              >
-                Start a Conversation{" "}
-                <FiArrowRight className="text-[15px] xxxl:text-lg xl3:text-[19px] xl4:text-[20px]" />
-              </Button>
+              <Magnetic className="w-full lg:w-auto" strength={0.2}>
+                <Button
+                  href="/contact"
+                  size="lg"
+                  variant="primary"
+                  className="w-full lg:w-auto justify-center"
+                >
+                  Start a Conversation{" "}
+                  <FiArrowRight className="text-[15px] xxxl:text-lg xl3:text-[19px] xl4:text-[20px]" />
+                </Button>
+              </Magnetic>
               <a
                 href="mailto:ifeanyihm@gmail.com"
                 className="flex items-center gap-2 text-slate hover:text-white transition-colors duration-200 text-sm xxxl:text-[15px] xl3:text-[17px] xl4:text-[19px] font-mono"

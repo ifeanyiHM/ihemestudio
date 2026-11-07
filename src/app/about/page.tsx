@@ -1,17 +1,18 @@
+import { FadeIn } from "@/components/animationss/FadeIn";
+import { CTASection } from "@/components/sections/CTASection";
+import { Button, SectionLabel } from "@/components/ui";
+import { SKILL_GROUPS, STATS } from "@/lib/data";
 import type { Metadata } from "next";
 import {
-  FiMapPin,
   FiArrowRight,
   FiGithub,
   FiLinkedin,
-  FiTwitter,
   FiMail,
+  FiMapPin,
+  FiTwitter,
 } from "react-icons/fi";
-import { SectionLabel, Tag, Button } from "@/components/ui";
-import { SkillBar } from "@/components/ui/SkillBar";
-import { SKILL_GROUPS, STATS } from "@/lib/data";
-import { CTASection } from "@/components/sections/CTASection";
-import { FadeIn } from "@/components/animations/FadeIn";
+import { SkillLedger } from "../../components/ui/SkillLedger";
+import { StackExplorer } from "../../components/ui/StackExplorer";
 
 export const metadata: Metadata = {
   title: "About",
@@ -203,40 +204,19 @@ export default function AboutPage() {
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl4:gap-24">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-16 xl4:gap-24 items-start">
             <FadeIn direction="up" delay={80}>
-              <div className="space-y-8 xxxl:space-y-10">
-                {SKILL_GROUPS.map((group) => (
-                  <div key={group.label}>
-                    <p className="text-2xs xxxl:text-[0.675rem] xl3:text-[0.75rem] xl4:text-[0.825rem] font-mono text-teal uppercase tracking-widest mb-3 xl3:mb-4 xl4:mb-6">
-                      {group.label}
-                    </p>
-                    <div className="flex flex-wrap gap-2 xxxl:gap-3">
-                      {group.skills.map((skill) => (
-                        <Tag key={skill}>{skill}</Tag>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <StackExplorer groups={SKILL_GROUPS} />
             </FadeIn>
 
-            <FadeIn direction="up" delay={140}>
-              <div className="space-y-5 xxxl:space-y-7">
-                <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest mb-3 xxxl:mb-4">
+            <div>
+              <FadeIn direction="up" delay={140}>
+                <p className="text-2xs xxxl:text-[0.875rem] font-mono text-teal uppercase tracking-widest mb-5 xxxl:mb-6">
                   Frequently Used
                 </p>
-                {FREQUENTLY_USED.map((s, i) => (
-                  <SkillBar
-                    key={s.label}
-                    label={s.label}
-                    pct={s.pct}
-                    usage={s.usage}
-                    delay={i * 80}
-                  />
-                ))}
-              </div>
-            </FadeIn>
+              </FadeIn>
+              <SkillLedger entries={FREQUENTLY_USED} />
+            </div>
           </div>
         </div>
       </section>

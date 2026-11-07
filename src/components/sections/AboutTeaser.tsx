@@ -1,6 +1,6 @@
+import { FadeIn } from "@/components/animationss/FadeIn";
+import { Button, SectionLabel } from "@/components/ui";
 import { FiArrowRight, FiMapPin } from "react-icons/fi";
-import { SectionLabel, Button } from "@/components/ui";
-import { FadeIn } from "@/components/animations/FadeIn";
 
 const VALUES = [
   {

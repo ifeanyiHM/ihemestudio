@@ -1,70 +1,25 @@
-"use client";
-import { useEffect, useRef } from "react";
-import { FiArrowRight, FiCode, FiLayers, FiZap } from "react-icons/fi";
+import { BlurText } from "@/components/animations/BlurText";
+import { FadeIn } from "@/components/animations/FadeIn";
+import { Magnetic } from "@/components/animations/Magnetic";
 import { Button } from "@/components/ui";
+import { FiArrowRight } from "react-icons/fi";
+import { HeroVisual } from "./HeroVisual";
+
+const HERO_STACK = ["Next.js", "React", "React Native", "TypeScript"];
 
 export function Hero() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-    let animId: number,
-      time = 0;
-    const resize = () => {
-      canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-      canvas.height = canvas.offsetHeight * window.devicePixelRatio;
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-    };
-    resize();
-    window.addEventListener("resize", resize);
-    const dots = Array.from({ length: 28 }, () => ({
-      x: Math.random() * (canvas.offsetWidth || 600),
-      y: Math.random() * (canvas.offsetHeight || 600),
-      size: Math.random() * 1.5 + 0.3,
-      speed: Math.random() * 0.3 + 0.1,
-      phase: Math.random() * Math.PI * 2,
-    }));
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
-      time += 0.005;
-      dots.forEach((dot) => {
-        const y = dot.y + Math.sin(time * dot.speed + dot.phase) * 8;
-        const alpha = 0.15 + Math.sin(time * dot.speed + dot.phase) * 0.08;
-        ctx.beginPath();
-        ctx.arc(dot.x, y, dot.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0,212,170,${alpha})`;
-        ctx.fill();
-      });
-      for (let i = 0; i < dots.length; i++) {
-        for (let j = i + 1; j < dots.length; j++) {
-          const dx = dots[i].x - dots[j].x,
-            dy = dots[i].y - dots[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 130) {
-            ctx.beginPath();
-            ctx.moveTo(dots[i].x, dots[i].y);
-            ctx.lineTo(dots[j].x, dots[j].y);
-            ctx.strokeStyle = `rgba(0,212,170,${0.05 * (1 - dist / 130)})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-          }
-        }
-      }
-      animId = requestAnimationFrame(draw);
-    };
-    draw();
-    return () => {
-      cancelAnimationFrame(animId);
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
-
   return (
     <section className="relative min-h-screen md:min-h-[70vh] lg:min-h-screen flex items-center overflow-hidden pt-28 pb-16">
       <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
+      {/* Grid fades out toward the edges so it reads as texture, not a wall */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 60% at 50% 40%, transparent 40%, #08090A 100%)",
+        }}
+      />
       <div
         className="absolute inset-0 pointer-events-none"
         aria-hidden="true"
@@ -77,137 +32,83 @@ export function Hero() {
       <div className="site-container relative z-10 px-6 grid lg:grid-cols-2 gap-16 xl4:gap-20 items-center w-full">
         {/* Left — content */}
         <div>
-          <div className="inline-flex items-center gap-3 pl-3 pr-4 py-2 xxxl:py-2.5 xl3:py-3 xl4:py-3.5 border border-teal-border bg-teal-subtle mb-8 xxxl:mb-10 xl3:mb-12 xl4:mb-14">
-            <span className="w-1 h-3 bg-teal animate-pulse-slow" />
-            <span className="text-teal text-xs xxxl:text-[13px] xl3:text-[14.5px] xl4:text-[17px] font-mono uppercase tracking-[0.12em]">
-              Available for new projects
-            </span>
-          </div>
+          <FadeIn direction="none" duration={800}>
+            <div className="inline-flex items-center gap-3 pl-3 pr-4 py-2 xxxl:py-2.5 xl3:py-3 xl4:py-3.5 border border-teal-border bg-teal-subtle mb-8 xxxl:mb-10 xl3:mb-12 xl4:mb-14">
+              <span className="w-1 h-3 bg-teal animate-pulse-slow" />
+              <span className="text-teal text-xs xxxl:text-[13px] xl3:text-[14.5px] xl4:text-[17px] font-mono uppercase tracking-[0.12em]">
+                Available for new projects
+              </span>
+            </div>
+          </FadeIn>
 
-          <h1 className="font-display text-white mb-6 xl3:mb-8 xl4:mb-10 leading-[1.05] tracking-tight text-[clamp(2.25rem,5vw,3.75rem)] lg:text-[clamp(2rem,5vw,2.9rem)] xl:text-[clamp(2.25rem,5vw,3.75rem)] xxl:text-[4rem] xxxl:text-[4.2rem] xl3:text-[4.5rem] xl4:text-[5.2rem] font-bold">
-            We build software that scales.
-            {/* <em className="text-gradient not-italic">scales.</em> */}
-          </h1>
-
-          <p className="max-w-[35rem] xxxl:max-w-[41rem] xl3:max-w-[43rem] xl4:max-w-[49rem] text-slate-light font-light text-[clamp(1rem,1.5vw,1.125rem)] xxxl:text-[1.3rem] xl3:text-[1.37rem] xl4:text-[1.6rem] leading-relaxed mb-10">
-            Iheme Studio is a software engineering organization based in Lagos,
-            Nigeria. We design and engineer high-performance web applications,
-            enterprise dashboards, and digital products for ambitious teams.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-4 mb-14">
-            <Button href="/projects" size="lg" variant="primary">
-              View Our Work <FiArrowRight size={16} />
-            </Button>
-            <Button href="/contact" size="lg" variant="secondary">
-              Start a Project
-            </Button>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-2 md:gap-8 lg:gap-6 xl:gap-8 text-slate-muted text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] font-mono tracking-wide uppercase">
-            <span>Next.js</span>
-            <span className="w-1 h-1 rounded-full bg-white/20" />
-            <span>React</span>
-            <span className="w-1 h-1 rounded-full bg-white/20" />
-            <span>React Native</span>
-            <span className="w-1 h-1 rounded-full bg-white/20" />
-            <span>TypeScript</span>
-          </div>
-        </div>
-
-        {/* Right — structural visual */}
-        <div className="relative hidden lg:block h-[450px] xl:h-[520px] xxxl:h-[600px] xl3:h-[640px] xl4:h-[700px]">
-          <canvas
-            ref={canvasRef}
-            className="absolute inset-0 w-full h-full opacity-70"
-            aria-hidden="true"
+          <BlurText
+            as="h1"
+            trigger="mount"
+            delay={0.15}
+            segments={[
+              { text: "We build software that " },
+              { text: "scales.", className: "text-gradient" },
+            ]}
+            className="font-display text-white mb-6 xl3:mb-8 xl4:mb-10 leading-[1.05] tracking-tight text-[clamp(2.25rem,5vw,3.75rem)] lg:text-[clamp(2rem,5vw,2.9rem)] xl:text-[clamp(2.25rem,5vw,3.75rem)] xxl:text-[4rem] xxxl:text-[4.2rem] xl3:text-[4.5rem] xl4:text-[5.2rem] font-bold"
           />
 
-          {/* Outer frame */}
-          <div
-            className="absolute inset-0 rounded-2xl border border-white/[0.06]"
-            aria-hidden="true"
-          />
-
-          {/* Floating card 1 — top */}
-          <div className="absolute top-8 xl4:top-10 right-6 xl3:right-8 xl4:right-9 w-56 xxxl:w-60 xl3:w-64 xl4:w-80 rounded-xl border border-white/[0.08] bg-ink-800/80 backdrop-blur-md p-5 xxxl:p-6 xl3:p-6 xl4:p-8 animate-float-slow">
-            <div className="flex items-center gap-2 xxxl:gap-3 xl3:gap-4 xl4:gap-5 mb-3">
-              <div className="icon-box-sm">
-                <FiCode
-                  size={14}
-                  className="text-teal xxxl:text-[20px] xl3:text-[21px] xl4:text-[22px]"
-                />
-              </div>
-              <span className="text-white text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] font-semibold">
-                Clean Code
-              </span>
-            </div>
-            <p className="text-slate text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[17px] leading-relaxed">
-              Maintainable, scalable architecture from day one.
+          <FadeIn delay={500}>
+            <p className="max-w-[35rem] xxxl:max-w-[41rem] xl3:max-w-[43rem] xl4:max-w-[49rem] text-slate-light font-light text-[clamp(1rem,1.5vw,1.125rem)] xxxl:text-[1.3rem] xl3:text-[1.37rem] xl4:text-[1.6rem] leading-relaxed mb-10">
+              Iheme Studio is a software engineering organization based in
+              Lagos, Nigeria. We design and engineer high-performance web
+              applications, enterprise dashboards, and digital products for
+              ambitious teams.
             </p>
-          </div>
+          </FadeIn>
 
-          {/* Floating card 2 — middle, offset left */}
-          <div className="absolute top-[36%] xl:top-[42%] left-6 xl3:left-7 xl4:left-10 w-52 xxxl:w-60 xl3:w-64 xl4:w-72 rounded-xl border border-white/[0.08] bg-ink-800/80 backdrop-blur-md p-5 xxxl:p-6 xl3:p-6 xl4:p-8 shadow-card-hover animate-float-slower">
-            <div className="flex items-center gap-2 xxxl:gap-3 xl3:gap-4 xl4:gap-5 mb-3">
-              <div className="icon-box-sm">
-                <FiLayers
-                  size={14}
-                  className="text-teal xxxl:text-[20px] xl3:text-[21px] xl4:text-[22px]"
-                />
-              </div>
-              <span className="text-white text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] font-semibold">
-                Design Systems
-              </span>
+          <FadeIn delay={650}>
+            <div className="flex flex-wrap items-center gap-4 mb-14">
+              <Magnetic>
+                <Button href="/projects" size="lg" variant="primary">
+                  View Our Work <FiArrowRight size={16} />
+                </Button>
+              </Magnetic>
+              <Button href="/contact" size="lg" variant="secondary">
+                Start a Project
+              </Button>
             </div>
-            <p className="text-slate text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[17px] leading-relaxed">
-              Consistent UI components built to scale across products.
-            </p>
-          </div>
+          </FadeIn>
 
-          {/* Floating card 3 — bottom right */}
-          <div className="absolute bottom-10 right-10 xl3:right-12 xl4:right-13 w-48 xxxl:w-56 xl3:w-60 xl4:w-[17rem] rounded-xl border border-white/[0.08] bg-ink-800/80 backdrop-blur-md p-5 xxxl:p-6 xl3:p-6 xl4:p-8 shadow-card-hover animate-float-slow">
-            <div className="flex items-center gap-2 xxxl:gap-3 xl3:gap-4 xl4:gap-5 mb-3">
-              <div className="icon-box-sm">
-                <FiZap
-                  size={14}
-                  className="text-teal xxxl:text-[20px] xl3:text-[21px] xl4:text-[22px]"
-                />
-              </div>
-              <span className="text-white text-sm xxxl:text-[17px] xl3:text-[17.5px] xl4:text-[18px] font-semibold">
-                Fast Delivery
-              </span>
-            </div>
-            <p className="text-slate text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[17px] leading-relaxed">
-              From concept to production, built for speed.
-            </p>
-          </div>
-
-          {/* Center connecting lines */}
-          <svg
-            className="absolute inset-0 w-full h-full pointer-events-none"
-            aria-hidden="true"
-          >
-            <line
-              x1="35%"
-              y1="20%"
-              x2="55%"
-              y2="45%"
-              stroke="rgba(0,212,170,0.15)"
-              strokeWidth="1"
-              strokeDasharray="4 4"
-            />
-            <line
-              x1="55%"
-              y1="45%"
-              x2="40%"
-              y2="78%"
-              stroke="rgba(0,212,170,0.15)"
-              strokeWidth="1"
-              strokeDasharray="4 4"
-            />
-          </svg>
+          <FadeIn delay={800}>
+            <ul className="flex flex-wrap items-center gap-2 md:gap-8 lg:gap-6 xl:gap-8 text-slate-muted text-xs xxxl:text-[15px] xl3:text-[15.5px] xl4:text-[16px] font-mono tracking-wide uppercase">
+              {HERO_STACK.map((tech, i) => (
+                <li
+                  key={tech}
+                  className="flex items-center gap-2 md:gap-8 lg:gap-6 xl:gap-8"
+                >
+                  {i > 0 && (
+                    <span
+                      className="w-1 h-1 rounded-full bg-white/20"
+                      aria-hidden="true"
+                    />
+                  )}
+                  <span>{tech}</span>
+                </li>
+              ))}
+            </ul>
+          </FadeIn>
         </div>
+
+        {/* Right — interactive structural visual */}
+        <HeroVisual />
+      </div>
+
+      {/* Scroll cue */}
+      <div
+        className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex-col items-center gap-3"
+        aria-hidden="true"
+      >
+        <span className="text-2xs font-mono uppercase tracking-[0.3em] text-slate-muted">
+          Scroll
+        </span>
+        <span className="relative block w-px h-10 overflow-hidden bg-white/10">
+          <span className="absolute inset-0 bg-teal animate-scroll-cue" />
+        </span>
       </div>
 
       <div

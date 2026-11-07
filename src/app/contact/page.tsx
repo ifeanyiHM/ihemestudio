@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { FadeIn } from "@/components/animationss/FadeIn";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { SectionLabel } from "@/components/ui";
+import type { Metadata } from "next";
 import {
+  FiClock,
   FiGithub,
   FiLinkedin,
-  FiTwitter,
   FiMail,
   FiMapPin,
-  FiClock,
+  FiTwitter,
 } from "react-icons/fi";
-import { FadeIn } from "@/components/animations/FadeIn";
 
 export const metadata: Metadata = {
   title: "Contact",

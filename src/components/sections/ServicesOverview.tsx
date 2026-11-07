@@ -1,19 +1,19 @@
-import {
-  FiMonitor,
-  FiServer,
-  FiBarChart2,
-  FiZap,
-  FiSmartphone,
-  FiShoppingBag,
-  FiGlobe,
-  FiRefreshCw,
-  FiLayout,
-  FiClipboard,
-  FiArrowRight,
-} from "react-icons/fi";
-import { SectionLabel, Button } from "@/components/ui";
-import { FadeIn } from "@/components/animations/FadeIn";
+import { FadeIn } from "@/components/animationss/FadeIn";
+import { Button, SectionLabel } from "@/components/ui";
 import { SERVICES } from "@/lib/data";
+import {
+  FiArrowRight,
+  FiBarChart2,
+  FiClipboard,
+  FiGlobe,
+  FiLayout,
+  FiMonitor,
+  FiRefreshCw,
+  FiServer,
+  FiShoppingBag,
+  FiSmartphone,
+  FiZap,
+} from "react-icons/fi";
 
 const ICONS: Record<string, React.ElementType> = {
   HiOutlineDesktopComputer: FiMonitor,

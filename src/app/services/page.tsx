@@ -1,21 +1,20 @@
-import type { Metadata } from "next";
-import {
-  FiMonitor,
-  FiServer,
-  FiBarChart2,
-  FiZap,
-  FiSmartphone,
-  FiShoppingBag,
-  FiGlobe,
-  FiRefreshCw,
-  FiLayout,
-  FiClipboard,
-  FiArrowRight,
-} from "react-icons/fi";
+import { FadeIn } from "@/components/animationss/FadeIn";
+import { CTASection } from "@/components/sections/CTASection";
 import { SectionLabel } from "@/components/ui";
 import { SERVICES } from "@/lib/data";
-import { CTASection } from "@/components/sections/CTASection";
-import { FadeIn } from "@/components/animations/FadeIn";
+import type { Metadata } from "next";
+import {
+  FiBarChart2,
+  FiClipboard,
+  FiGlobe,
+  FiLayout,
+  FiMonitor,
+  FiRefreshCw,
+  FiServer,
+  FiShoppingBag,
+  FiSmartphone,
+  FiZap,
+} from "react-icons/fi";
 
 export const metadata: Metadata = {
   title: "Services",
