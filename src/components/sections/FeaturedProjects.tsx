@@ -1,7 +1,7 @@
-import { FiArrowRight } from "react-icons/fi";
-import { SectionLabel, Button } from "@/components/ui";
+import { Button, SectionLabel } from "@/components/ui";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { FEATURED_PROJECTS } from "@/lib/data";
+import { FiArrowRight } from "react-icons/fi";
 
 export function FeaturedProjects() {
   return (
@@ -28,7 +28,7 @@ export function FeaturedProjects() {
 
       {/* 2-column grid for featured projects */}
       <div className="flex flex-col gap-px bg-white/[0.06]">
-        {FEATURED_PROJECTS.map((project, i) => (
+        {FEATURED_PROJECTS.slice(0, 5).map((project, i) => (
           <ProjectCard
             key={project.id}
             project={project}

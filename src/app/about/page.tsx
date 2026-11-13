@@ -26,7 +26,8 @@ const FREQUENTLY_USED = [
   { label: "React / Next.js", pct: 95, usage: "Core" },
   { label: "Tailwind / SCSS", pct: 90, usage: "Core" },
   { label: "Node.js / Express.js", pct: 55, usage: "Go-To" },
-  { label: "Supabase / MongoDB", pct: 70, usage: "Regular" },
+  { label: "Supabase / MongoDB / Postgress", pct: 70, usage: "Regular" },
+  { label: "AI / LLM ", pct: 70, usage: "Regular" },
 ];
 
 const SOCIAL_LINKS = [

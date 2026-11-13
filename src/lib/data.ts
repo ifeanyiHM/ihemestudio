@@ -134,6 +134,28 @@ export const FEATURED_PROJECTS: Project[] = [
   //   impact: "Real-time climate data visualization from NASA POWER API",
   // },
   {
+    id: "kaytee-furnitures",
+    title: "Kaytee Furnitures & Interior",
+    tagline: "Portfolio site for a Lagos interior design studio",
+    description:
+      "A refined brand and portfolio website for a Lagos-based interior design studio. Visitors browse completed residential projects by room type, with before-and-after media for each, and book a consultation through a guided project brief that goes straight to the studio's inbox. ",
+    category: "fullstack",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Nodemailer",
+      "AI Integration",
+    ],
+    liveUrl: "https://www.kayteefurnitures.com/",
+    codeUrl: "https://github.com/ifeanyiHM/kaytee-furnitures",
+    featured: true,
+    year: 2026,
+    impact: "Project showcase, consultation booking & AI design assistant",
+  },
+  {
     id: "starsight-portal",
     title: "Starsight Employee Portal",
     tagline: "Centralized HR documentation platform",

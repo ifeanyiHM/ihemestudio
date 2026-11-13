@@ -21,6 +21,7 @@ const PLACEHOLDER_IMAGES = [
   "/project/ankora.jpeg",
   "/project/axign.png",
   // "project/atlas.png",
+  "./project/kayteed.jpg",
   "/project/portal.png",
 ];
 

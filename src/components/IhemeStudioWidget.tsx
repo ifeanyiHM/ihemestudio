@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
-import { LuMessageCircleMore } from "react-icons/lu";
+import { SYSTEM_PROMPT } from "@/lib/ai/systemPrompt";
+import { useEffect, useRef, useState } from "react";
 import { GoDash } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
-import { SYSTEM_PROMPT } from "@/lib/ai/systemPrompt";
+import { LuMessageCircleMore } from "react-icons/lu";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -111,6 +110,7 @@ export default function IhemeStudioWidget() {
   const [widgetState, setWidgetState] = useState<WidgetState>("closed");
   const [isMaximized, setIsMaximized] = useState(false);
   const [hasEverOpened, setHasEverOpened] = useState(false);
+  const [revealed, setRevealed] = useState(false);
 
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -137,6 +137,25 @@ export default function IhemeStudioWidget() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const contactInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (revealed) return;
+    const check = () => {
+      const scrollable =
+        document.documentElement.scrollHeight - window.innerHeight;
+      // Pages too short to scroll show the launcher straight away.
+      if (scrollable <= 0 || window.scrollY / scrollable >= 0.5) {
+        setRevealed(true);
+      }
+    };
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    return () => {
+      window.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
+    };
+  }, [revealed]);
 
   // Scroll to bottom on new messages
   useEffect(() => {
@@ -501,7 +520,8 @@ export default function IhemeStudioWidget() {
       `}</style>
 
       {/* ── FAB ── */}
-      {widgetState === "closed" && (
+
+      {widgetState === "closed" && revealed && (
         <button
           onClick={openPanel}
           aria-label="Chat with the Iheme Studio assistant"
