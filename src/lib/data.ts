@@ -176,6 +176,30 @@ export const FEATURED_PROJECTS: Project[] = [
     year: 2024,
     impact: "Real-time climate data visualization from NASA POWER API",
   },
+  {
+    id: "bookapro",
+    title: "BookAPro",
+    tagline: "Home repairs and cleaning in Lagos, booked at a fixed price",
+    description:
+      "A full-stack booking platform for home services in Lagos, covering AC servicing, electrical work, plumbing and cleaning. Customers pick a service, their area and an arrival window, see one fixed price up front, and pay securely in Naira through Paystack. Every booking gets a reference they can use to look it up later, and email notifications keep everyone updated. Technicians apply and get vetted through an onboarding flow, then manage their own jobs, while a protected admin dashboard handles services, areas, bookings, enquiries and technician applications. Larger or new-build jobs go to the team through a separate enquiry form.",
+    category: "fullstack",
+    type: "service-app",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Paystack",
+      "Nodemailer",
+    ],
+    liveUrl: "https://bookapro.vercel.app/",
+    codeUrl: "https://github.com/ifeanyiHM/bookapro",
+    featured: true,
+    year: 2026,
+    impact:
+      "Fixed-price booking, technician onboarding & admin-managed operations",
+  },
 ];
 
 export const OTHER_PROJECTS: Project[] = [
