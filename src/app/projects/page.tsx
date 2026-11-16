@@ -3,6 +3,7 @@ import { SectionLabel } from "@/components/ui";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { FEATURED_PROJECTS, OTHER_PROJECTS } from "@/lib/data";
 import type { Metadata } from "next";
+import { ProjectShowcase } from "../../components/sections/ProjectShowcase";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -129,16 +130,7 @@ export default function ProjectsPage() {
               {String(FEATURED_PROJECTS.length).padStart(2, "0")} Projects
             </span>
           </div>
-          <div className="flex flex-col gap-px bg-white/[0.06]">
-            {FEATURED_PROJECTS.map((project, i) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-                index={i}
-                reverse={i % 2 === 1}
-              />
-            ))}
-          </div>
+          <ProjectShowcase projects={FEATURED_PROJECTS} />
         </div>
       </section>
 

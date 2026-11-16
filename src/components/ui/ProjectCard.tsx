@@ -20,9 +20,9 @@ const PLACEHOLDER_IMAGES = [
   "/project/craf.png",
   "/project/ankora.jpeg",
   "/project/axign.png",
-  // "project/atlas.png",
-  "./project/kayteed.jpg",
+  "/project/kayteed.jpg",
   "/project/portal.png",
+  "/project/atlas.png",
 ];
 
 function getProjectImage(project: Project, index = 0) {

@@ -45,6 +45,7 @@ export const FEATURED_PROJECTS: Project[] = [
     description:
       "A full-featured property marketplace that simplifies how people search, explore, and purchase apartments and homes. We architected a robust data layer using Supabase, with a seamless React frontend that surfaces listings with rich detail and intuitive filtering — reducing the typical property-search friction from weeks to hours.",
     category: "fullstack",
+    type: "marketplace",
     tags: ["TypeScript", "React", "Supabase", "SCSS", "JavaScript", "MongDB"],
     liveUrl: "https://1502properties.com/",
     codeUrl: "https://github.com/ifeanyiHM/phoenixglobal",
@@ -59,6 +60,7 @@ export const FEATURED_PROJECTS: Project[] = [
     description:
       "A modern, full-stack website built for the Children Rights Advocate (CRA) Foundation to increase awareness, donations, and child sponsorship. The platform enables visitors to sponsor children, make secure donations, explore the foundation's impact, and learn about its mission through an accessible, responsive interface. ",
     category: "fullstack",
+    type: "website",
     tags: [
       "Next.js",
       "TypeScript",
@@ -81,6 +83,7 @@ export const FEATURED_PROJECTS: Project[] = [
     description:
       "A full-stack e-commerce platform for Nigerian traditional fabrics, from aso oke and adire to ankara, lace and kente. Customers browse fourteen fabric families, choose a quantity by the yard, piece or set, and pay in Naira through Paystack with no account needed. Every order gets a unique order number that customers use to track it, and transactional emails keep them updated. We also built a secure admin dashboard for managing products, categories, stock and order status.",
     category: "fullstack",
+    type: "ecommerce",
     tags: [
       "Next.js",
       "TypeScript",
@@ -103,6 +106,7 @@ export const FEATURED_PROJECTS: Project[] = [
     description:
       "A comprehensive organizational operations platform built specifically for businesses. We engineered role-based access control so CEOs can create and assign tasks while employees manage progress in real time. Automated notifications, analytics dashboards, and a Storybook-documented component library replace scattered email threads with a single source of truth.",
     category: "fullstack",
+    type: "saas",
     tags: [
       "Next.js",
       "TypeScript",
@@ -119,20 +123,6 @@ export const FEATURED_PROJECTS: Project[] = [
     year: 2024,
     impact: "Role-based access, real-time analytics & team collaboration",
   },
-  // {
-  //   id: "starsight-atlas",
-  //   title: "Starsight Atlas",
-  //   tagline: "NASA-powered environmental analytics dashboard",
-  //   description:
-  //     "A modern climate and energy intelligence platform that queries the NASA POWER API in real time. Users search any global location — or use GPS — to retrieve temperature, rainfall, and solar radiation data within a custom date range. We built responsive data visualizations and intelligent location-search suggestions into a professional dashboard built for energy analysts and environmental researchers.",
-  //   category: "dashboard",
-  //   tags: ["Next.js", "TypeScript", "React", "Tailwind CSS", "NASA API"],
-  //   liveUrl: "https://starsight-solar.vercel.app/",
-  //   codeUrl: "https://github.com/ifeanyiHM/starsight-solar",
-  //   featured: true,
-  //   year: 2024,
-  //   impact: "Real-time climate data visualization from NASA POWER API",
-  // },
   {
     id: "kaytee-furnitures",
     title: "Kaytee Furnitures & Interior",
@@ -140,6 +130,7 @@ export const FEATURED_PROJECTS: Project[] = [
     description:
       "A refined brand and portfolio website for a Lagos-based interior design studio. Visitors browse completed residential projects by room type, with before-and-after media for each, and book a consultation through a guided project brief that goes straight to the studio's inbox. ",
     category: "fullstack",
+    type: "website",
     tags: [
       "Next.js",
       "TypeScript",
@@ -162,12 +153,28 @@ export const FEATURED_PROJECTS: Project[] = [
     description:
       "A digital HR operations hub that streamlines how employees access, complete, and track internal company forms. We focused relentlessly on reducing administrative drag — giving staff a clear, organized interface that cuts time-to-completion on routine documents and gives HR teams full visibility into submission status.",
     category: "platform",
+    type: "internal-tool",
     tags: ["Next.js", "TypeScript", "React", "Tailwind CSS", "JavaScript"],
     liveUrl: "https://starsight-employee-form-portal.vercel.app/",
     codeUrl: "https://github.com/ifeanyiHM/starsight-employee-form-portal",
     featured: true,
     year: 2024,
     impact: "Streamlined HR workflows & document management",
+  },
+  {
+    id: "starsight-atlas",
+    title: "Starsight Atlas",
+    tagline: "NASA-powered environmental analytics dashboard",
+    description:
+      "A modern climate and energy intelligence platform that queries the NASA POWER API in real time. Users search any global location — or use GPS — to retrieve temperature, rainfall, and solar radiation data within a custom date range. We built responsive data visualizations and intelligent location-search suggestions into a professional dashboard built for energy analysts and environmental researchers.",
+    category: "dashboard",
+    type: "internal-tool",
+    tags: ["Next.js", "TypeScript", "React", "Tailwind CSS", "NASA API"],
+    liveUrl: "https://starsight-solar.vercel.app/",
+    codeUrl: "https://github.com/ifeanyiHM/starsight-solar",
+    featured: true,
+    year: 2024,
+    impact: "Real-time climate data visualization from NASA POWER API",
   },
 ];
 

@@ -1,3 +1,16 @@
+export type ProjectType =
+  | "website"
+  | "webapp"
+  | "ecommerce"
+  | "marketplace"
+  | "saas"
+  | "service-app"
+  | "internal-tool"
+  | "dashboard"
+  | "mobile"
+  | "api"
+  | "design-system";
+
 export interface Project {
   image?: string;
   id: string;
@@ -5,6 +18,7 @@ export interface Project {
   tagline: string;
   description: string;
   category: "fullstack" | "frontend" | "dashboard" | "platform";
+  type?: ProjectType;
   tags: string[];
   liveUrl?: string;
   codeUrl?: string;

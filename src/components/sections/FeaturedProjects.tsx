@@ -1,7 +1,7 @@
 import { Button, SectionLabel } from "@/components/ui";
-import { ProjectCard } from "@/components/ui/ProjectCard";
 import { FEATURED_PROJECTS } from "@/lib/data";
 import { FiArrowRight } from "react-icons/fi";
+import { ProjectShowcase } from "./ProjectShowcase";
 
 export function FeaturedProjects() {
   return (
@@ -26,17 +26,8 @@ export function FeaturedProjects() {
         </Button>
       </div>
 
-      {/* 2-column grid for featured projects */}
-      <div className="flex flex-col gap-px bg-white/[0.06]">
-        {FEATURED_PROJECTS.slice(0, 5).map((project, i) => (
-          <ProjectCard
-            key={project.id}
-            project={project}
-            index={i}
-            reverse={i % 2 === 1}
-          />
-        ))}
-      </div>
+      {/* Category filter + project list (shows 5 on "All", every match when filtered) */}
+      <ProjectShowcase projects={FEATURED_PROJECTS} limit={5} />
     </section>
   );
 }
